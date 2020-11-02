@@ -30,7 +30,50 @@ nav li {
     list-style: none;
 }
 
+.nav-links a{
+    color: var(--color-font-light);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Display none for sizes larger than... */
+.burger {
+    display: none;
+}
+
+.line {
+    background-color: var(--color-font-light);
+    width: 25px;
+    height: 3px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 .logo {
     letter-spacing: 3px;
     text-transform: capitalize;
+}
+
+/* Media Queries */
+@media screen and (max-width: 375px) {
+
+    /* Show the burger */
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+    }
 }
