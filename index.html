@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greg Stead</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -27,13 +29,57 @@
         </nav>
     </header>
     <main>
-        <div id="homeEl"></div>
-        <div id="aboutEl"></div>
-        <div id="projectsEl"></div>
-        <div id="resumeEl"></div>
-        <div id="contactEl"></div>
+        <!-- Home -->
+        <section id="homeEl"></section>
+        <!-- About Section -->
+        <section id="aboutEl" class="hidden">
+            <div class="container">
+                <img src="https://via.placeholder.com/100X100" />
+                <p>Greg Stead is a web developer living in Overland Park, Kansas. He is currently an arcade
+                    technical support representative at <a href="https://amusementconnect.com/"
+                        class="about-link">Amusement Connect</a> where he helps connect people to FUN through
+                    excellent customer service and arcade equipment maintenance.</p>
+                <p>Greg is also an avid musician and freelances as an oboist in the Kansas City metro. He has
+                    performed with the <a href="https://www.kcsymphony.org/" class="about-link">Kansas City
+                        Symphony</a> and was previously a member of the <a href="https://www.springfieldmosymphony.org/"
+                        class="about-link">Springfield Symphony
+                        Orchestra</a> and the <a href="https://themiso.org/" class="about-link"></a>Miami
+                    Symphony Orchestra</a>.</p>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projectsEl" class='hidden'>
+            <div class="container">
+                <h2 class="">Projects</h2>
+                <div class="card">
+                    <p class="">Discomfort Zone</p>
+                    <img src="https://via.placeholder.com/150X75" />
+                    <a href="https://gregstead.github.io/discomfort_zone/">LINK</a>
+                </div>
+                <div class="card">
+                    <p class="">Weather Dashboard</p>
+                    <img src="https://via.placeholder.com/150X75" />
+                    <a href="https://gregstead.github.io/06_weather_dashboard/">LINK</a>
+                </div>
+                <div class="card">
+                    <p class="">Workday Scheduler</p>
+                    <img src="https://via.placeholder.com/150X75" />
+                    <a href="https://gregstead.github.io/05_workday_scheduler/">LINK</a>
+                </div>
+                <div class="card">
+                    <p class="">Password Generator</p>
+                    <img src="https://via.placeholder.com/150X75" />
+                    <a href="https://gregstead.github.io/03_password_generator/">LINK</a>
+                </div>
+            </div>
+        </section>
+        <!-- Resume -->
+        <section id="resumeEl"></section>
+        <!-- Contact -->
+        <section id="contactEl"></section>
     </main>
 
     <script src="assets/script.js"></script>
 </body>
+
 </html>

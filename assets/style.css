@@ -68,6 +68,10 @@ nav li {
     padding: 0.01em 16px;
 }
 
+.hidden {
+    display: none;
+}
+
 .line {
     background-color: var(--color-font-light);
     width: 25px;
