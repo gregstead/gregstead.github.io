@@ -13,9 +13,9 @@ const contactEl = document.getElementById('contactEl');
 
 const projectsArr = [
     {
-        title: 'Weather Dashboard',
+        title: 'Discomfort Zone',
         image: 'https://via.placeholder.com/150X75',
-        url: 'https://gregstead.github.io/06_weather_dashboard/',
+        url: 'https://gregstead.github.io/discomfort_zone/',
     },
     {
         title: 'Weather Dashboard',
@@ -23,14 +23,14 @@ const projectsArr = [
         url: 'https://gregstead.github.io/06_weather_dashboard/',
     },
     {
-        title: 'Weather Dashboard',
+        title: 'Workday Scheduler',
         image: 'https://via.placeholder.com/150X75',
-        url: 'https://gregstead.github.io/06_weather_dashboard/',
+        url: 'https://gregstead.github.io/05_workday_scheduler/',
     },
     {
-        title: 'Weather Dashboard',
+        title: 'Password Generator',
         image: 'https://via.placeholder.com/150X75',
-        url: 'https://gregstead.github.io/06_weather_dashboard/',
+        url: 'https://gregstead.github.io/03_password_generator/',
     }
 ]
 
@@ -90,6 +90,7 @@ function renderAboutEl() {
 };
 
 function renderProjectsEl() {
+
     const projectsContainer = document.createElement('div');
     projectsContainer.setAttribute('class', 'container');
 
@@ -99,6 +100,11 @@ function renderProjectsEl() {
     projectsContainer.appendChild(projectsTitle)
 
     for (let i = 0; i < projectsArr.length; i++) {
+        let cardDirection = 'card-left';
+        if (i % 2 === 1) {
+            cardDirection = 'card-right'
+        }
+
         const projectTitle = document.createElement('p');
         projectTitle.setAttribute('class', '');
         projectTitle.innerText = projectsArr[i].title;
@@ -111,7 +117,7 @@ function renderProjectsEl() {
         projectLinkTag.innerText = 'LINK'
 
         const projectCard = document.createElement('div');
-        projectCard.setAttribute('class', 'card');
+        projectCard.setAttribute('class', 'card ' + cardDirection);
 
         projectCard.appendChild(projectTitle)
         projectCard.appendChild(projectImage)
@@ -131,3 +137,10 @@ function renderContactEl() {
     console.log("Contact element");
 };
 
+function emptyElement(element) {
+    if (element.firstChild) {
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
+    }
+}

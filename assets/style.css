@@ -53,6 +53,20 @@ nav li {
     display: none;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: fit-content;
+    height: fit-content;
+}
+
+.card-right {
+    
+}
+
 .container {
     padding: 0.01em 16px;
 }
