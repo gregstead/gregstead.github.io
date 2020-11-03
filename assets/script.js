@@ -11,26 +11,32 @@ const projectsEl = document.getElementById('projectsEl');
 const resumeEl = document.getElementById('resumeEl');
 const contactEl = document.getElementById('contactEl');
 
+const elArr = [homeEl, aboutEl, projectsEl, resumeEl, contactEl];
+
 const projectsArr = [
     {
         title: 'Discomfort Zone',
         image: 'https://via.placeholder.com/150X75',
         url: 'https://gregstead.github.io/discomfort_zone/',
+        description: '',
     },
     {
         title: 'Weather Dashboard',
         image: 'https://via.placeholder.com/150X75',
         url: 'https://gregstead.github.io/06_weather_dashboard/',
+        description: '',
     },
     {
         title: 'Workday Scheduler',
         image: 'https://via.placeholder.com/150X75',
         url: 'https://gregstead.github.io/05_workday_scheduler/',
+        description: '',
     },
     {
         title: 'Password Generator',
         image: 'https://via.placeholder.com/150X75',
         url: 'https://gregstead.github.io/03_password_generator/',
+        description: '',
     }
 ]
 
@@ -44,22 +50,27 @@ document.addEventListener('click', (event) => {
     };
 
     if (event.target.matches('#HomeLi')) {
+        elReset();
         renderHomeEl();
     };
 
     if (event.target.matches('#aboutLi')) {
+        elReset();
         renderAboutEl();
     };
 
     if (event.target.matches('#projectsLi')) {
+        elReset();
         renderProjectsEl();
     };
 
     if (event.target.matches('#resumeLi')) {
+        elReset();
         renderResumeEl();
     };
 
     if (event.target.matches('#contactLi')) {
+        elReset();
         renderContactEl();
     };
 
@@ -137,10 +148,6 @@ function renderContactEl() {
     console.log("Contact element");
 };
 
-function emptyElement(element) {
-    if (element.firstChild) {
-        while (element.firstChild) {
-            element.removeChild(element.firstChild);
-        }
-    }
+function elReset() {
+    elArr.forEach( element => element.textContent = '')
 }
