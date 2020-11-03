@@ -53,6 +53,10 @@ nav li {
     display: none;
 }
 
+.container {
+    padding: 0.01em 16px;
+}
+
 .line {
     background-color: var(--color-font-light);
     width: 25px;
