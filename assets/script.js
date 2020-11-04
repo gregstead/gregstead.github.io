@@ -23,30 +23,25 @@ document.addEventListener('click', (event) => {
     };
 
     if (event.target.matches('#homeLi')) {
-        elReset();
         renderHomeEl();
     };
 
     if (event.target.matches('#aboutLi')) {
-        elReset();
         renderAboutEl();
         burgerAnimation(); // Needs to be fixed for non-mobile
     };
 
     if (event.target.matches('#projectsLi')) {
-        elReset();
         renderProjectsEl();
         burgerAnimation(); // Needs to be fixed for non-mobile
     };
 
     if (event.target.matches('#resumeLi')) {
-        elReset();
         renderResumeEl();
         burgerAnimation(); // Needs to be fixed for non-mobile
     };
 
     if (event.target.matches('#contactLi')) {
-        elReset();
         renderContactEl();
         burgerAnimation(); // Needs to be fixed for non-mobile
     };
@@ -74,10 +69,14 @@ function renderHomeEl() {
     console.log("Home element");
 };
 
-function renderAboutEl() {};
+function renderAboutEl() {
+    elReset();
+    aboutEl.classList.toggle('hidden');
+};
 
 function renderProjectsEl() {
-    projectsEl.setAttribute('class', '');
+    elReset();
+    projectsEl.classList.toggle('hidden');
 };
 
 function renderResumeEl() {
