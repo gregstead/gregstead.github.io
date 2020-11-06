@@ -28,22 +28,22 @@ document.addEventListener('click', (event) => {
 
     if (event.target.matches('#aboutLi')) {
         renderAboutEl();
-        burgerAnimation(); // Needs to be fixed for non-mobile
+        burgerAnimation();
     };
 
     if (event.target.matches('#projectsLi')) {
         renderProjectsEl();
-        burgerAnimation(); // Needs to be fixed for non-mobile
+        burgerAnimation();
     };
 
     if (event.target.matches('#resumeLi')) {
         renderResumeEl();
-        burgerAnimation(); // Needs to be fixed for non-mobile
+        burgerAnimation();
     };
 
     if (event.target.matches('#contactLi')) {
         renderContactEl();
-        burgerAnimation(); // Needs to be fixed for non-mobile
+        burgerAnimation();
     };
 
     console.log("event.target: ", event.target);
