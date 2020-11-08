@@ -66,6 +66,7 @@ function burgerAnimation() {
 };
 
 function renderHomeEl() {
+    elReset();
     console.log("Home element");
 };
 
@@ -80,10 +81,12 @@ function renderProjectsEl() {
 };
 
 function renderResumeEl() {
-    console.log("Resume element");
+    elReset();
+    resumeEl.classList.toggle('hidden');
 };
 
 function renderContactEl() {
+    elReset();
     console.log("Contact element");
 };
 
