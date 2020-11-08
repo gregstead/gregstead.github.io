@@ -170,6 +170,26 @@ nav li {
     }
 }
 
+.res-body {
+    margin-top: 2em;
+}
+
+.res-heading {
+    font-size: 25px;
+}
+
+.res-item {
+    margin-top: .5em;
+}
+.res-section {
+    margin-top: .5em;
+}
+
+.res-text {
+    margin-left: 1em;
+    font-size: 15px;
+}
+
 .socio-icons {
     padding: 40px 40px;
     display: flex;
