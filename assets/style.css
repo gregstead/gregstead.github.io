@@ -7,17 +7,34 @@
     --color-gray-trans: rgba(184, 184, 184, .95);
     --color-light: #DBDBDB;
     --color-darkGrey: #494949;
+
+    --h1-standard-size: 40px;
+    --h2-standard-size: 35px;
+    --h3-standard-size: 30px;
 }
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: var(--color-darkGrey);
 }
 
 body {
     background-color: var(--color-grey);
     font-family: var(--fontHeading);
+}
+
+h1 {
+    font-size: var(--h1-standard-size);
+}
+
+h2 {
+    font-size: var(--h2-standard-size);
+}
+
+h3 {
+    font-size: var(--h3-standard-size);
 }
 
 p {
@@ -62,7 +79,24 @@ nav li {
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 40px;
+    font-size: var(--h1-standard-size);
+}
+
+.about-container {
+    margin-top: 2em;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.about-image {
+    align-self: center;
+    border: 2px;
+    border-radius: 90% 39% 48% 52% / 9% 10% 8% 5%;
+}
+
+.about-text {
+    font-size: 18px;
 }
 
 .burger {
