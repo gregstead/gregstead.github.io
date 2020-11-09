@@ -57,6 +57,9 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     padding-top: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav li {
@@ -181,6 +184,7 @@ nav li {
 .res-item {
     margin-top: .5em;
 }
+
 .res-section {
     margin-top: .5em;
 }
