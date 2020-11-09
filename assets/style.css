@@ -57,9 +57,6 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     padding-top: 15px;
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
 nav li {
