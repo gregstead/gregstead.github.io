@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="./test.css">
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -43,13 +44,13 @@
 
         <div id="navbar-links" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item"> About </a>
+            <a class="navbar-item" id="AboutBurgerlink"> About </a>
 
-            <a class="navbar-item"> Projects </a>
+            <a class="navbar-item" id="ProjectsBurgerlink"> Projects </a>
 
-            <a class="navbar-item"> Resume </a>
+            <a class="navbar-item" id="ResumeBurgerlink"> Resume </a>
 
-            <a class="navbar-item"> Contact </a>
+            <a class="navbar-item" id="ContactBurgerlink"> Contact </a>
             
             </div>
           </div>
@@ -74,28 +75,96 @@
                         </div>
 
                             <div class="about-text">
-                            <p>I am a web developer living in Overland Park, Kansas. I recently completed the <a href="bootcamp.ku.edu">Full-Stack Coding Bootcamp</a> at the University of Kansas and I am currently an arcade
+                            <p>I am a web developer in Overland Park, Kansas. I recently completed the <a href="https://bootcamp.ku.edu" id="kuboot">Full-Stack Coding Bootcamp</a> at the University of Kansas and I am an arcade
                             technical support representative at <a href="https://amusementconnect.com/"
-                            class="about-link">Amusement Connect</a> where I help connect people to FUN through
+                            id="AmCo">Amusement Connect</a> where I help connect people to FUN through
                             excellent customer service and arcade equipment maintenance. With a masters degree in music performance and 5 years of progressive experience in arts administration, I bring a wide breadth of knowledge, experience, and creativity to problem-solving.  
                             </p>
                             <hr>
-                            <p>I am also an avid musician and freelances as an oboist in the Kansas City metro. I have
-                            performed with the <a href="https://www.kcsymphony.org/" class="about-link">Kansas City
+                            <p>I am also an avid musician and freelance as an oboist in the Kansas City metro. I have
+                            performed with the <a href="https://www.kcsymphony.org/" id="kcsymph">Kansas City
                             Symphony</a> and was previously a member of the <a
-                            href="https://www.springfieldmosymphony.org/" class="about-link">Springfield</a> and <a href="https://themiso.org/" class="about-link">Miami</a>
+                            href="https://www.springfieldmosymphony.org/" id="sso">Springfield</a> and <a href="https://themiso.org/" id="miso">Miami</a>
                             </a>Symphony Orchestras.
                             </p>
                     </div>
                     <div class="">
-                    <a class="p-3 is-size-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="p-3 is-size-1" href=""><i class="fab fa-github"></i></a>
-                    <a class="p-3 is-size-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="p-3 is-size-1" href=""><i id="fa-linkedin-in" class="fab fa-linkedin-in"></i></a>
+                    <a class="p-3 is-size-1" href=""><i id="fa-github" class="fab fa-github"></i></a>
+                    <a class="p-3 is-size-1" href=""><i id="fa-twitter" class="fab fa-twitter"></i></a>
                     </div></div>
                 </div>
             </div>
         </section>
-      </main>
+        <!-- Projects Section -->
+        <section id="projectsEl" class='is-hidden'>
+            <div class="container projects-container">
+                <div class="card projects-card">
+                    <h3 class="">Discomfort Zone</h3>
+                    <a id="proj1" href="https://gregstead.github.io/discomfort_zone/"><img class="project-img" src="./assets/images/discomfort_zone.png" /></a>
+                </div>
+                <div class="card projects-card">
+                    <h3 class="">Weather Dashboard</h3>
+                    <a id="proj2" href="https://gregstead.github.io/06_weather_dashboard/"><img class="project-img" src="./assets/images/weather_dashboard.png" /></a>
+                </div>
+                <div class="card projects-card">
+                    <h3 class="">Workday Scheduler</h3>
+                    <a id="proj2" href="https://gregstead.github.io/05_workday_scheduler/"><img class="project-img" src="/assets/images/workday_scheduler.png" /></a>
+                </div>
+            </div>
+        </section>
+        <!-- Resume -->
+        <section id="resumeEl" class="hidden">
+            <div class="container">
+                <div class="res-body">
+                    <section class="res-section">
+                        <h4 class="res-heading">Technical Proficiencies</h4>
+                        <p class="res-text">JavaScript, HTML, CSS, Python, Git</p>
+                    </section>
+                    <section class="res-section">
+                        <h4 class="res-heading">Recent Work Experience</h4>
+                        <div class="res-item">
+                            <p class="res-text">Amusement Connect Kansas City, Missouri</p>
+                            <p class="res-text">Arcade Technical Support Representative 02/2020–present</p>
+                            <p class="res-text">Provided tier 1 help desk support to clients, assembled and tested OEM computer kiosks, flashed and tested electrical components</p>
+                        </div>
+                        <div class="res-item">
+                            <p class="res-text">VIPKid Remote position</p>
+                            <p class="res-text">English tutor 05/2019–02/2020</p>
+                            <p class="res-text">Taught remote ESOL lessons to students in China, ages 6-10</p>
+                        </div>
+                        <div class="res-item">
+                            <p class="res-text">Donnelly College Kansas City, Kansas</p>
+                            <p class="res-text">Adjunct professor 08/2019–12/2019</p>
+                            <p class="res-text">Guided students to a greater appreciation of music by introducing them to fundamental musical analysis techniques and presenting recordings in lectures, emphasizing the cultural and historical context of the music</p>
+                        </div>
+                        <div class="res-item">
+                            <p class="res-text">The Friends of Chamber Music, Kansas City Kansas City, Missouri</p>
+                            <p class="res-text">Box Office and Concert Production Manager 01/2017–05/2019</p>
+                            <p class="res-text">Reporting directly to the founder, artistic director and CEO, I was responsible for all concert production and venue readiness, planned and executed a ~$500k budget. In addition, I assisted in the artistic planning, edited marketing copy, and project managed the annual program book. Together, the team presented 14 international artists annually.</p>
+                        </div>
+                    </section>
+                    <section class="res-section">
+                        <h4 class="res-heading">Education</h4>
+                        <div class="res-item">
+                            <p class="res-text">KU Full-Stack Flex Coding Boot Camp 03/2021 (expected)</p>
+                            <p class="res-text">University of Kansas Lifelong & Professional Education; Overland Park, Kansas</p>
+                        </div>
+                        <div class="res-item">
+                            <p class="res-text">Master of Music 05/2014</p>
+                            <p class="res-text">Lynn University; Boca Raton, Florida</p>
+                        </div>
+                        <div class="res-item">
+                            <p class="res-text">Bachelor of Arts in Music, cum laude 05/2011</p>
+                            <p class="res-text">Florida State University; Tallahassee, Florida</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section id="contactEl"></section>
+    </main>
       <script src="./test.js"></script>
   </body>
 </html>

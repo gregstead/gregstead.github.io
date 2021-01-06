@@ -1,59 +1,58 @@
 $(document).ready(function () {
-  const nav = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links li");
+  // Cache the DOM
+  const homeEl = $("#homeEl");
+  const aboutEl = $("#aboutEl");
+  const projectsEl = $("#projectsEl");
+  const resumeEl = $("#resumeEl");
+  const contactEl = $("#contactEl");
 
-  const homeEl = document.getElementById("homeEl");
-  const aboutEl = document.getElementById("aboutEl");
-  const projectsEl = document.getElementById("projectsEl");
-  const resumeEl = document.getElementById("resumeEl");
-  const contactEl = document.getElementById("contactEl");
+  const elArr = [homeEl, aboutEl, projectsEl, resumeEl, contactEl];
 
   document.addEventListener("click", (event) => {
-    // Prevent page from redirecting
     event.preventDefault();
 
-    if (event.target.matches(".burger") || event.target.matches(".line")) {
-      burgerAnimation();
-    }
-
-    if (event.target.matches("#homeLi")) {
-      renderHomeEl();
-    }
-
-    if (event.target.matches("#aboutLi")) {
-      renderAboutEl();
-      burgerAnimation();
-    }
-
-    if (event.target.matches("#projectsLi")) {
-      renderProjectsEl();
-      burgerAnimation();
-    }
-
-    if (event.target.matches("#resumeLi")) {
-      renderResumeEl();
-      burgerAnimation();
-    }
-
-    if (event.target.matches("#contactLi")) {
-      renderContactEl();
-      burgerAnimation();
-    }
-
+    // Prevent page from redirecting
     if (event.target.matches(".fa-linkedin-in")) {
       openLinkedIn();
     }
 
-    if (event.target.matches(".fa-twitter")) {
-      openTwitter();
-    }
+    //switch someFuntion(event.target)
+    //
+    switch ($(event.target).attr("id")) {
+      case "fa-twitter":
+        openTwitter();
+        break;
+      case "fa-github":
+        openGitHub();
+        break;
+      case "kcsymph":
+      case "miso":
+      case "AmCo":
+      case "sso":
+        openNewTab(event.target);
+        break;
+      case "fa-linkedin-in":
+        openLinkedIn();
+        break;
+      case "fa-linkedin-in":
+        openLinkedIn();
+        break;
+      case "fa-linkedin-in":
+        openLinkedIn();
+        break;
+      case "fa-linkedin-in":
+        openLinkedIn();
+        break;
+      case "AboutBurgerlink":
+      case "ProjectsBurgerlink":
+      case "ResumeBurgerlink":
+      case "ContactBurgerlink":
+        elReset(elArr);
+        showElement(event.target);
+        break;
 
-    if (event.target.matches(".fa-github")) {
-      openGitHub();
-    }
-
-    if (event.target.matches(".project-img")) {
-      projectLink(event.target);
+      default:
+        break;
     }
 
     console.log("event.target: ", event.target);
@@ -66,3 +65,29 @@ $(document).ready(function () {
     $(".navbar-menu").toggleClass("is-active");
   });
 });
+
+function elReset(elArr) {
+  elArr.forEach((element) => element.attr("class", "is-hidden"));
+}
+
+function showElement(eventTarget) {
+  // get which thing it is
+  const elName = `#` + $(eventTarget).text().toLowerCase().trim() + `El`;
+  $(elName).attr("class", "");
+}
+
+function openNewTab(eventTarget) {
+  window.open($(eventTarget).attr("href"));
+}
+
+function openLinkedIn() {
+  window.open("https://linkedin.com/in/gregstead/");
+}
+
+function openGitHub() {
+  window.open("https://github.com/gregstead");
+}
+
+function openTwitter() {
+  window.open("https://twitter.com/soylentgreg");
+}
