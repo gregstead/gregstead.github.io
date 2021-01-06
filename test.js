@@ -81,11 +81,36 @@ function renderProjects() {
 }
 
 function cardFactory(datum) {
-  //Makes a card from github information and writes it to page
-  const card = $("<div>")
-    .attr("class", "card")
-    .text("Hello")
-    .appendTo(projectsEl);
+  const projectTitle = "Project Title";
+  const projectSubTitle = "sdskl";
+  // Makes a card from github information and writes it to page
+  const card = $("<div>").attr("class", "card");
+  const cardImage = $("<div>").attr("class", "card").appendTo(card);
+  const figImg = $("<figure>")
+    .attr({ class: ["image is-4by3"] })
+    .appendTo(cardImage);
+  const img = $("<img>")
+    .attr({
+      src: "https://via.placeholder.com/1280x960.png",
+      alt: "Placeholder image",
+    })
+    .appendTo(figImg);
+  //
+  const cardContent = $("<div>").attr("class", "card-content").appendTo(card);
+  const media = $("<div>").attr("class", "media").appendTo(cardContent);
+  const mediacontent = $("<div>")
+    .attr("class", "media-content")
+    .appendTo(media);
+  const title = $("<p>")
+    .attr({ class: "title is-4" })
+    .text(projectTitle)
+    .appendTo(media);
+  const subTitle = $("<p>")
+    .attr({ class: "subtitle is-6" })
+    .text(projectSubTitle)
+    .appendTo(title);
+
+  card.appendTo(projectsEl);
 }
 
 function elReset(elArr) {

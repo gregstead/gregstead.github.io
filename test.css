@@ -3,7 +3,7 @@
 :root {
   --fontHeading: "Cormorant Garamond", serif;
   --fontMain: "Lato", sans-serif;
-  --color-grey: rgba(184, 184, 184, 1);
+  --color-grey: #dddbdb;
   --color-gray-trans: rgba(184, 184, 184, 0.95);
   --color-light: #dbdbdb;
   --color-darkGrey: #494949;
@@ -23,6 +23,22 @@
 body {
   background-color: var(--color-grey);
   font-family: var(--fontHeading);
+}
+
+p {
+  font-size: 18px;
+}
+
+.navbar-item {
+  opacity: 1;
+  font-family: var(--fontHeading);
+  color: var(--color-darkGrey);
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .projects-card {
