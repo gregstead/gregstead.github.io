@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   const elArr = [homeEl, aboutEl, projectsEl, resumeEl, contactEl];
 
-  document.addEventListener("click", (event) => {
+  document.addEventListener("click", async (event) => {
     event.preventDefault();
 
     // Prevent page from redirecting
@@ -19,6 +19,9 @@ $(document).ready(function () {
     //switch someFuntion(event.target)
     //
     switch ($(event.target).attr("id")) {
+      case "fa-linkedin-in":
+        openLinkedIn();
+        break;
       case "fa-twitter":
         openTwitter();
         break;
@@ -30,25 +33,22 @@ $(document).ready(function () {
       case "AmCo":
       case "sso":
         openNewTab(event.target);
-        break;
-      case "fa-linkedin-in":
-        openLinkedIn();
-        break;
-      case "fa-linkedin-in":
-        openLinkedIn();
-        break;
-      case "fa-linkedin-in":
-        openLinkedIn();
-        break;
-      case "fa-linkedin-in":
-        openLinkedIn();
-        break;
+
       case "AboutBurgerlink":
-      case "ProjectsBurgerlink":
       case "ResumeBurgerlink":
       case "ContactBurgerlink":
         elReset(elArr);
         showElement(event.target);
+        break;
+      case "ProjectsBurgerlink":
+        elReset(elArr);
+        await renderProjects();
+        showElement(event.target);
+        break;
+      case "proj1":
+      case "proj2":
+      case "proj3":
+        openNewTab($(event.target).parent());
         break;
 
       default:
@@ -65,6 +65,10 @@ $(document).ready(function () {
     $(".navbar-menu").toggleClass("is-active");
   });
 });
+
+async function renderProjects() {
+  console.log("i work");
+}
 
 function elReset(elArr) {
   elArr.forEach((element) => element.attr("class", "is-hidden"));

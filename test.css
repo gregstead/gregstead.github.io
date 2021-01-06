@@ -25,6 +25,16 @@ body {
   font-family: var(--fontHeading);
 }
 
+.projects-card {
+  margin: 15px 10px 15px 10px;
+}
+
+.projects-container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
 .res-body {
   margin-top: 2em;
 }
