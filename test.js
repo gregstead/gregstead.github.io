@@ -42,7 +42,7 @@ $(document).ready(function () {
         break;
       case "ProjectsBurgerlink":
         elReset(elArr);
-        await renderProjects();
+        renderProjects();
         showElement(event.target);
         break;
       case "proj1":
@@ -66,8 +66,26 @@ $(document).ready(function () {
   });
 });
 
-async function renderProjects() {
-  console.log("i work");
+function renderProjects() {
+  // Makes a request to github
+  $.ajax({
+    url: "https://api.github.com/users/gregstead/repos",
+    data: { limit: 10 },
+  }).then((data) => {
+    data.forEach((datum) => {
+      if (datum.homepage) {
+        cardFactory(datum);
+      }
+    });
+  });
+}
+
+function cardFactory(datum) {
+  //Makes a card from github information and writes it to page
+  const card = $("<div>")
+    .attr("class", "card")
+    .text("Hello")
+    .appendTo(projectsEl);
 }
 
 function elReset(elArr) {
