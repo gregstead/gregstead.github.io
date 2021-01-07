@@ -77,3 +77,12 @@ div.content {
   place-content: center;
   justify-content: space-between;
 }
+
+#contactEl > div.container {
+  padding: 2em;
+}
+
+#contact-form-status {
+  color: crimson;
+  font-size: 15px;
+}

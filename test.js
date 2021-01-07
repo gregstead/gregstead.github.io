@@ -50,6 +50,9 @@ $(document).ready(function () {
         // Change burger class?
         burgerToggleClass();
         break;
+      case "contact-form-submit":
+        contactSubmit();
+        break;
       default:
         break;
     }
@@ -128,6 +131,25 @@ function burgerToggleClass() {
 
 //   card.appendTo(projectsEl);
 // }
+
+function contactSubmit() {
+  const $form = $("#contact-form");
+  const $status = $("#contact-form-status");
+  $form.attr("action", "mailto:gregstead@gmail.com");
+  $status.text("Loading...");
+  $.ajax({
+    url: "email.php",
+    method: "POST",
+    data: $form.serialize(),
+    success: (result) => {
+      if (result == "success") {
+        $status.text("Message sent!");
+      } else {
+        $status.text("Message send failure");
+      }
+    },
+  });
+}
 
 function elReset(elArr) {
   elArr.forEach((element) => element.attr("class", "is-hidden"));

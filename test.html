@@ -229,8 +229,8 @@
     </section>
     <!-- Contact -->
     <section id="contactEl" class="is-hidden">
-      <div class="container">
-        <form action="" method="post">
+      <div class="container ">
+        <form id="contact-form" action="" method="post">
           <div class="field">
             <label class="label">Name</label>
             <div class="control">
@@ -254,26 +254,27 @@
 
           <div class="field">
             <label class="label">Subject</label>
-                <div class="control">
-                  <input class="input" type="text">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Message</label>
             <div class="control">
-              <textarea class="textarea"></textarea>
+              <input class="input" type="text">
             </div>
           </div>
+      </div>
+      </div>
 
-          <div class="field is-grouped">
-            <div class="control">
-              <button id="contact-form-submit" class="button is-link">Submit</button>
-            </div>
-          </div>
-        </form>
+      <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+          <textarea class="textarea"></textarea>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <p id="contact-form-status" class=""></p>
+          <button id="contact-form-submit" class="button is-link">Submit</button>
+        </div>
+      </div>
+      </form>
       </div>
     </section>
   </main>
