@@ -29,6 +29,15 @@ p {
   font-size: 18px;
 }
 
+p.title {
+  text-transform: capitalize;
+}
+
+div.content {
+  text-transform: initial;
+  font-size: 18px;
+}
+
 .navbar-item {
   opacity: 1;
   font-family: var(--fontHeading);
@@ -39,16 +48,6 @@ p {
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 20px;
-}
-
-.projects-card {
-  margin: 15px 10px 15px 10px;
-}
-
-.projects-container {
-  margin-top: 2em;
-  display: flex;
-  flex-direction: column;
 }
 
 .res-body {

@@ -42,7 +42,7 @@ $(document).ready(function () {
         break;
       case "ProjectsBurgerlink":
         elReset(elArr);
-        renderProjects();
+        //renderProjects();
         showElement(event.target);
         break;
       case "proj1":
@@ -50,7 +50,9 @@ $(document).ready(function () {
       case "proj3":
         openNewTab($(event.target).parent());
         break;
-
+      case "/{9}/":
+        openNewTab(event.target);
+        break;
       default:
         break;
     }
@@ -66,55 +68,80 @@ $(document).ready(function () {
   });
 });
 
-function renderProjects() {
-  // Makes a request to github
-  $.ajax({
-    url: "https://api.github.com/users/gregstead/repos",
-    data: { limit: 10 },
-  }).then((data) => {
-    data.forEach((datum) => {
-      if (datum.homepage) {
-        cardFactory(datum);
-      }
-    });
-  });
-}
+// function renderProjects() {
+//   // Makes a request to github
+//   $.ajax({
+//     url: "https://api.github.com/users/gregstead/repos",
+//   }).then((data) => {
+//     data.reverse().forEach((datum) => {
+//       // Only get back 10 results where I am an author
+//       if (
+//         datum.owner.login == "gregstead" &&
+//         datum.description &&
+//         datum.name != "bulma-templates"
+//       ) {
+//         cardFactory(datum);
+//       }
+//     });
+//   });
+// }
 
-function cardFactory(datum) {
-  const projectTitle = "Project Title";
-  const projectSubTitle = "sdskl";
-  // Makes a card from github information and writes it to page
-  const card = $("<div>").attr("class", "card");
-  const cardImage = $("<div>").attr("class", "card").appendTo(card);
-  const figImg = $("<figure>")
-    .attr({ class: ["image is-4by3"] })
-    .appendTo(cardImage);
-  const img = $("<img>")
-    .attr({
-      src: "https://via.placeholder.com/1280x960.png",
-      alt: "Placeholder image",
-    })
-    .appendTo(figImg);
-  //
-  const cardContent = $("<div>").attr("class", "card-content").appendTo(card);
-  const media = $("<div>").attr("class", "media").appendTo(cardContent);
-  const mediacontent = $("<div>")
-    .attr("class", "media-content")
-    .appendTo(media);
-  const title = $("<p>")
-    .attr({ class: "title is-4" })
-    .text(projectTitle)
-    .appendTo(media);
-  const subTitle = $("<p>")
-    .attr({ class: "subtitle is-6" })
-    .text(projectSubTitle)
-    .appendTo(title);
+// function cardFactory(datum) {
+//   // Format the name
+//   const projectTitle = formatTitle(datum.name);
+//   const projectSubTitle = "";
+//   const projectDescription = datum.description;
+//   const projectLink = datum.url;
+//   const projectId = datum.id;
+//   // Makes a card from github information and writes it to page
+//   const card = $("<div>").attr("class", "card");
+//   const cardImage = $("<div>").attr("class", "card").appendTo(card);
+//   const figImg = $("<figure>")
+//     .attr({ class: ["image is-4by3"] })
+//     .appendTo(cardImage);
+//   const img = $("<img>")
+//     .attr({
+//       src: "https://via.placeholder.com/1280x960.png",
+//       alt: "Placeholder image",
+//     })
+//     .appendTo(figImg);
+//   //
+//   const cardContent = $("<div>").attr("class", "card-content").appendTo(card);
+//   const media = $("<div>").attr("class", "media").appendTo(cardContent);
+//   const mediacontent = $("<div>")
+//     .attr("class", "media-content")
+//     .appendTo(media);
+//   const title = $("<p>")
+//     .attr({ class: "title is-4", href: projectLink, id: projectId })
+//     .text(projectTitle)
+//     .appendTo(media);
+//   const subTitle = $("<p>")
+//     .attr({ class: "subtitle is-6" })
+//     .text(projectSubTitle)
+//     .appendTo(title);
+//   const contentContent = $("<div>")
+//     .attr("class", "content")
+//     .text(projectDescription)
+//     .appendTo(title);
 
-  card.appendTo(projectsEl);
-}
+//   card.appendTo(projectsEl);
+// }
 
 function elReset(elArr) {
   elArr.forEach((element) => element.attr("class", "is-hidden"));
+}
+
+function formatTitle(string) {
+  let title = string.split("_");
+  let newTitle = "";
+  for (let i = 0; i < title.length; i++) {
+    const element = title[i];
+    if (parseInt(element)) {
+    } else {
+      newTitle += element + " ";
+    }
+  }
+  return newTitle.trim();
 }
 
 function showElement(eventTarget) {
