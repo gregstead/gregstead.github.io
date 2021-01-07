@@ -32,26 +32,23 @@ $(document).ready(function () {
       case "miso":
       case "AmCo":
       case "sso":
-        openNewTab(event.target);
-
-      case "AboutBurgerlink":
-      case "ResumeBurgerlink":
-      case "ContactBurgerlink":
-        elReset(elArr);
-        showElement(event.target);
-        break;
-      case "ProjectsBurgerlink":
-        elReset(elArr);
-        //renderProjects();
-        showElement(event.target);
-        break;
       case "proj1":
       case "proj2":
       case "proj3":
-        openNewTab($(event.target).parent());
-        break;
-      case "/{9}/":
+      case "git1":
+      case "git2":
+      case "git3":
         openNewTab(event.target);
+        break;
+      case "AboutBurgerlink":
+      case "ResumeBurgerlink":
+      case "ContactBurgerlink":
+      case "ProjectsBurgerlink":
+        elReset(elArr);
+        showElement(event.target);
+        // Hide burger
+        // Change burger class?
+        burgerToggleClass();
         break;
       default:
         break;
@@ -63,10 +60,15 @@ $(document).ready(function () {
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(function () {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
+    burgerToggleClass();
   });
 });
+
+function burgerToggleClass() {
+  // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+  $(".navbar-burger").toggleClass("is-active");
+  $(".navbar-menu").toggleClass("is-active");
+}
 
 // function renderProjects() {
 //   // Makes a request to github
