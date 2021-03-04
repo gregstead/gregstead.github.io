@@ -86,3 +86,7 @@ div.content {
   color: crimson;
   font-size: 15px;
 }
+
+.rounded {
+  border-radius: 40%;
+}
