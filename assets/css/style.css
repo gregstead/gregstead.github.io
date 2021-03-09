@@ -13,6 +13,11 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #8dE1FFl;
+}
+
 .burger {
   display: block;
 }
