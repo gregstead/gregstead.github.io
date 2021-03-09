@@ -34,11 +34,12 @@ nav {
 }
 
 .nav-links {
+  background-color: white;
+  opacity: 50%;
   position: fixed;
   right: 0px;
   height: 92vh;
   top: var(--navbar-height);
-  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,11 +49,30 @@ nav {
 }
 
 .nav-links li {
+  list-style: none;
   opacity: 0;
 }
 
+.nav-links a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
 .nav-active {
-  transform: translate(0%);
+  transform: translate(-50%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .active #burger-line-1 {

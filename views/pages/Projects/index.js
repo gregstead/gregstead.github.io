@@ -97,7 +97,7 @@ let Projects = {
               <div class="card-image">
                 <figure class="image is-4by3">
                   <img
-                    src="./assets/images/employee_tracker4x3.png"
+                    src=""
                     alt="Placeholder image"
                   />
                 </figure>
