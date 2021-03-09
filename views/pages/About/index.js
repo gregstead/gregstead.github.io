@@ -2,7 +2,7 @@ let About = {
   render: async () => {
     let view = `
     <!-- About Section -->
-    <section id="aboutEl" class="">
+    <section id="aboutEl" class="container">
       <div class="container">
         <div class="columns is-mobile">
           <div class="column is-10 is-offset-1">
