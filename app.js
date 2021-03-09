@@ -3,6 +3,7 @@
 import Home from "./views/pages/Home/index.js";
 import About from "./views/pages/About/index.js";
 import Projects from "./views/pages/Projects/index.js";
+import Resume from "./views/pages/Resume/index.js";
 import Error404 from "./views/pages/Error404/index.js";
 
 import Navbar from "./views/components/Navbar/index.js";
@@ -16,6 +17,7 @@ const routes = {
   "/home": Home,
   "/about": About,
   "/projects": Projects,
+  "/resume": Resume,
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.

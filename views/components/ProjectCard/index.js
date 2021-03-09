@@ -1,3 +1,7 @@
+// Link CSS module
+const styleSrc = "./views/components/ProjectCard/style.css";
+document.head.innerHTML += `<link type="text/css" rel="stylesheet" href="${styleSrc}"> `;
+
 // {
 //     title: String,
 //     image: String, // path to image

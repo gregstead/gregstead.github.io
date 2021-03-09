@@ -13,7 +13,7 @@ let Navbar = {
                 <li><a href="/#/home">home</a></li>
                 <li><a href="/#/about">about</a></li>
                 <li><a href="/#/projects">projects</a></li>
-                <li><a href="/#/reasume">resume</a></li>
+                <li><a href="/#/resume">resume</a></li>
             </ul>
             <div class="burger" onClick="burgerClickHandler(this)">
                 <div class="burger-line" id="burger-line-1"></div>
