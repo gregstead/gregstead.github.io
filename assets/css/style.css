@@ -1,3 +1,7 @@
+:root {
+  --navbar-height: 8vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +23,13 @@ body {
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: -1;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: var(--navbar-height);
   background-color: white;
 }
 
@@ -34,7 +37,7 @@ nav {
   position: fixed;
   right: 0px;
   height: 92vh;
-  top: 8vh;
+  top: var(--navbar-height);
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -44,13 +47,12 @@ nav {
   transition: transform 0.5s ease-in;
 }
 
-#nav-links li {
-  opacity: 1;
+.nav-links li {
+  opacity: 0;
 }
 
-.active #nav-links {
+.nav-active {
   transform: translate(0%);
-  transition: transform 0.5s ease-in;
 }
 
 .active #burger-line-1 {
