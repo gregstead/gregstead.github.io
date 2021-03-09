@@ -2,7 +2,7 @@ let Projects = {
   render: async () => {
     let view = `
       <!-- Projects Section -->
-      <section id="projectsEl" class="is-hidden">
+      <section id="projectsEl">
         <div class="columns">
           <!-- Card -->
           <div class="column is-one-third">

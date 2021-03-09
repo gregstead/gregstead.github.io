@@ -13,19 +13,18 @@ let About = {
             </div>
 
             <div class="about-text">
-              <p>Hi, I'm Greg! I am a full stack web developer trained in legacy technologies and the modern MERN stack.
-                I bring a wide breadth of knowledge, experience, and creativity to
+              <p>Hi, I'm Greg! I am a full stack web developer in Overland Park, Kansas.I bring a wide breadth of knowledge, experience, and creativity to
                 collaborative problem-solving. Currently, I help deliver innovation, value, and the best possible
                 experiences
                 to entertainment venues as an arcade support representative at <a href="https://amusementconnect.com/"
-                  id="AmCo">Amusement
+                target="_blank" rel="noopener noreferrer">Amusement
                   Connect</a>
               </p>
               <hr>
               <p>I am also an avid musician and freelance as an oboist in the Kansas City metro. I have
-                performed with the <a href="https://www.kcsymphony.org/" id="kcsymph">Kansas City
+                performed with the <a href="https://www.kcsymphony.org/" target="_blank" rel="noopener noreferrer">Kansas City
                   Symphony</a> and was previously a member of the <a href="https://www.springfieldmosymphony.org/"
-                  id="sso">Springfield</a> and <a href="https://themiso.org/" id="miso">Miami</a>
+                  target="_blank" rel="noopener noreferrer">Springfield</a> and <a href="https://themiso.org/" target="_blank" rel="noopener noreferrer">Miami</a>
                 </a>Symphony Orchestras.
               </p>
             </div>
