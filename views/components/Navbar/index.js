@@ -1,36 +1,22 @@
 let Navbar = {
   render: async () => {
     let view = `
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#/home">
-        Greg Stead
-      </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  
-    <div id="navbar-menu" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="#/home">
-          Home
-        </a>
-        <a class="navbar-item" href="#/about">
-        About
-      </a>
-        <a class="navbar-item" href="#/projects">
-          Projects
-        </a>
-
-        <a class="navbar-item" href="#/resume">
-          Resume
-        </a>
-    </div>
-  </nav>`;
+    <nav>
+            <div class="logo">
+                <h4>Greg Stead</h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/#/home">home</a></li>
+                <li><a href="/#/about">about</a></li>
+                <li><a href="/#/projects">projects</a></li>
+                <li><a href="/#/reasume">resume</a></li>
+            </ul>
+            <div class="burger" onClick="burgerClickHandler(this)">
+                <div class="burger-line" id="burger-line-1"></div>
+                <div class="burger-line" id="burger-line-2"></div>
+                <div class="burger-line" id="burger-line-3"></div>
+            </div>
+        </nav>`;
     return view;
   },
   after_render: async () => {},

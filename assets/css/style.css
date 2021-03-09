@@ -12,13 +12,14 @@ body {
   display: block;
 }
 
-.burger div {
+.burger-line {
   width: 25px;
   height: 3px;
   background-color: black;
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: -1;
 }
 
 nav {
@@ -52,12 +53,12 @@ nav {
   transition: transform 0.5s ease-in;
 }
 
-.active #burger-line1 {
+.active #burger-line-1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
-.active #burger-line2 {
+.active #burger-line-2 {
   opacity: 0;
 }
-.active #burger-line3 {
+.active #burger-line-3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
