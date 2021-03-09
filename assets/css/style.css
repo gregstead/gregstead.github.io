@@ -10,6 +10,7 @@
 
 body {
   overflow-x: hidden;
+  font-family: Helvetica, sans-serif;
 }
 
 .burger {
@@ -33,14 +34,6 @@ body {
   margin-top: auto;
   margin-right: auto;
   margin-left: auto;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: var(--navbar-height);
-  background-color: white;
 }
 
 .nav-links {
@@ -83,6 +76,9 @@ nav {
     opacity: 1;
     transform: translateX(0px);
   }
+}
+#page_container {
+  margin-top: var(--navbar-height);
 }
 
 .project-card-image {

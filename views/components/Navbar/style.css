@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: var(--navbar-height);
+  background-color: #e4e4e4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  font-size: 30px;
+}

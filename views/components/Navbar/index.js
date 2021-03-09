@@ -1,3 +1,7 @@
+// Link CSS module
+const styleSrc = "./views/components/Navbar/style.css";
+document.head.innerHTML += `<link type="text/css" rel="stylesheet" href="${styleSrc}"> `;
+
 let Navbar = {
   render: async () => {
     let view = `
