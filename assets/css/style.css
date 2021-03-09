@@ -89,7 +89,7 @@ nav {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  object-position: 20% 10%; /* try 20px 10px */
+  /* object-position: 20% 10%; try 20px 10px */
   border: 1px solid red;
 }
 
