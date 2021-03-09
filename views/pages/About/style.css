@@ -1,0 +1,23 @@
+.about-text p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.centered-child {
+  text-align: center;
+}
+
+.is-size-1 {
+  font-size: 40px;
+}
+.p-3 {
+  padding: 15px;
+}
+
+.p-5 {
+  padding: 10px;
+}
+
+.rounded {
+  border-radius: 50%;
+}

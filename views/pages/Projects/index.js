@@ -49,7 +49,7 @@ const Projects = {
     const view = `
       <!-- Projects Section -->
       <section id="projectsEl" class="container">
-        <div class="columns">${projectCards}</div>
+        <div>${projectCards}</div>
       </section>
     `;
     return view;

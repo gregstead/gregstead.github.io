@@ -1,13 +1,15 @@
-let About = {
+// Link CSS module
+const styleSrc = "./views/pages/About/style.css";
+document.head.innerHTML += `<link type="text/css" rel="stylesheet" href="${styleSrc}"> `;
+
+const About = {
   render: async () => {
-    let view = `
+    const view = `
     <!-- About Section -->
     <section id="aboutEl" class="container">
-      <div class="container">
-        <div class="columns is-mobile">
-          <div class="column is-10 is-offset-1">
+
             <div class="columns">
-              <div class="column is-10 is-offset-1">
+              <div class="centered-child">
                 <img src="./assets/images/0.jpeg" alt="Greg Stead headshot" class="rounded m-0 p-5" />
               </div>
             </div>
@@ -16,7 +18,7 @@ let About = {
               <p>Hi, I'm Greg! I am a full stack web developer in Overland Park, Kansas.I bring a wide breadth of knowledge, experience, and creativity to
                 collaborative problem-solving. Currently, I help deliver innovation, value, and the best possible
                 experiences
-                to entertainment venues as an arcade support representative at <a href="https://amusementconnect.com/"
+                to entertainment venues as an applications engineer at <a href="https://amusementconnect.com/"
                 target="_blank" rel="noopener noreferrer">Amusement
                   Connect</a>
               </p>
@@ -28,14 +30,12 @@ let About = {
                 </a>Symphony Orchestras.
               </p>
             </div>
-            <div class="">
-              <a class="p-3 is-size-1" href=""><i id="fa-linkedin-in" class="fab fa-linkedin-in"></i></a>
-              <a class="p-3 is-size-1" href=""><i id="fa-github" class="fab fa-github"></i></a>
-              <a class="p-3 is-size-1" href=""><i id="fa-twitter" class="fab fa-twitter"></i></a>
+            <div class="centered-child">
+              <a class="p-3 is-size-1" href="https://www.linkedin.com/in/gregstead/" target="_blank" rel="noopener noreferrer"><i id="fa-linkedin-in" class="fab fa-linkedin-in"></i></a>
+              <a class="p-3 is-size-1" href="https://github.com/gregstead" target="_blank" rel="noopener noreferrer"><i id="fa-github" class="fab fa-github"></i></a>
+              <a class="p-3 is-size-1" href="https://twitter.com/soylentgreg" target="_blank" rel="noopener noreferrer"><i id="fa-twitter" class="fab fa-twitter"></i></a>
             </div>
-          </div>
-        </div>
-      </div>
+
     </section>
     `;
     return view;
