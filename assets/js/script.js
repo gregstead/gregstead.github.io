@@ -36,8 +36,4 @@ function burgerClickHandler(burger) {
   toggleClass(burger, "active");
 }
 
-ready(async () => {
-  document.addEventListener("click", (e) => {
-    console.log(e.target);
-  });
-});
+ready(() => {});

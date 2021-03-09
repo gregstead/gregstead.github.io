@@ -23,15 +23,15 @@ function ProjectCard(projectObject) {
           <div class="media-content">
             <p class="title is-4">${projectObject.title}</p>
             <p class="subtitle is-6">
-              <a href="${projectObject.deployedLink}">deployed app </a>||
-              <a href="${projectObject.githubLink}">GitHub repo</a>
+              <a href="${projectObject.deployedLink}" target="_blank" rel="noopener noreferrer">deployed app </a>||
+              <a href="${projectObject.githubLink}" target="_blank" rel="noopener noreferrer">GitHub repo</a>
             </p>
           </div>
         </div>
         <div class="content">${projectObject.description}</div>
       </div>
     </div>
-    <hr class="project-hr">
+    <hr>
   </div>`;
 }
 

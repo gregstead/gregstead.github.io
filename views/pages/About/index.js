@@ -5,7 +5,6 @@ document.head.innerHTML += `<link type="text/css" rel="stylesheet" href="${style
 const About = {
   render: async () => {
     const view = `
-    <!-- About Section -->
     <section id="aboutEl" class="container">
 
             <div class="columns">
