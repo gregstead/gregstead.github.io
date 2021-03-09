@@ -1,17 +1,43 @@
 import ProjectCard from "../../components/ProjectCard/index.js";
 
-const projectCards = [
+const projectCardsData = [
   {
     title: "Eat Da Burger",
-    image: "eatdaburger_image.png", // path to image
+    image: "./assets/images/eatdaburger_image.png",
     deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
     githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
     description: `This app takes a name from user and creates a burger on a
-      database. The burger can them be "devoured." The page will
-      render a list of burgers available to devour and burgers that
-      have been devoured.`,
+        database. The burger can them be "devoured." The page will
+        render a list of burgers available to devour and burgers that
+        have been devoured.`,
+  },
+  {
+    title: "Eat Da Burger",
+    image: "./assets/images/eatdaburger_image.png",
+    deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
+    githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
+    description: `This app takes a name from user and creates a burger on a
+        database. The burger can them be "devoured." The page will
+        render a list of burgers available to devour and burgers that
+        have been devoured.`,
+  },
+  {
+    title: "Eat Da Burger",
+    image: "./assets/images/eatdaburger_image.png",
+    deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
+    githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
+    description: `This app takes a name from user and creates a burger on a
+        database. The burger can them be "devoured." The page will
+        render a list of burgers available to devour and burgers that
+        have been devoured.`,
   },
 ];
+
+const projectCards = projectCardsData
+  .map((project) => {
+    return ProjectCard(project);
+  })
+  .join("");
 
 const Projects = {
   render: async () => {
@@ -20,7 +46,7 @@ const Projects = {
       <section id="projectsEl" class="container">
         <div class="columns">
           <!-- Card -->
-          ${ProjectCard(projectCards[0])}
+          ${projectCards}
           <!-- Card -->
           <div class="column is-one-third">
             <div class="card">

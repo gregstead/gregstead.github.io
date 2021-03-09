@@ -9,12 +9,9 @@ function ProjectCard(projectObject) {
   return `
     <div class="column is-one-third">
             <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="./assets/images/${projectObject.image}"
-                    alt="${projectObject.title} preview"
-                  />
+              <div class="project-card-image">
+                <figure>
+                <img class="project-card-image" src="${projectObject.image}">
                 </figure>
               </div>
               <div class="project-card-content">
