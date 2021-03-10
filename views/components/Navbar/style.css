@@ -1,3 +1,16 @@
+.burger {
+  display: block;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -12,4 +25,56 @@ nav {
 
 .logo {
   font-size: 30px;
+}
+
+.nav-links {
+  background-color: white;
+  opacity: 50%;
+  position: fixed;
+  right: 0px;
+  height: 92vh;
+  top: var(--navbar-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  transform: translate(100%);
+  transition: transform 0.5s ease-in;
+}
+
+.nav-links li {
+  list-style: none;
+  opacity: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.nav-active {
+  transform: translate(-50%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.active #burger-line-1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.active #burger-line-2 {
+  opacity: 0;
+}
+.active #burger-line-3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
