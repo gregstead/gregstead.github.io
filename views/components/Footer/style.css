@@ -1,0 +1,7 @@
+footer div {
+  position: fixed;
+  height: 5vh;
+  background-color: #e4e4e4;
+  bottom: 5px;
+  left: 0;
+}

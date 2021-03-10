@@ -1,0 +1,15 @@
+.project-card-image-container {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.project-card-image {
+  width: calc(100% - 40px);
+  height: 200px;
+  object-fit: contain;
+}
+
+div.content {
+  padding-bottom: 10px;
+}
