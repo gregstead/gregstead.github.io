@@ -1,0 +1,70 @@
+:root {
+  --home-square-size: 200px;
+  --home-square-inner-size: 150px;
+}
+
+div.home-circ {
+  width: var(--home-square-size);
+  height: var(--home-square-size);
+  margin: auto;
+  border: solid var(--dark-grey);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: translate(0, 130px) rotate(-35deg);
+  text-align: center;
+}
+
+div.home-circ.active {
+  animation-duration: 3s;
+  animation-name: wobble;
+}
+
+div.home-circ-inner {
+  width: var(--home-square-inner-size);
+  height: var(--home-square-inner-size);
+  margin: auto;
+  border: none;
+  background-color: var(--blue-primary);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  position: absolute;
+  transform: translate(83px, -83px) rotate(-35deg);
+  z-index: -1;
+}
+
+div.home-circ-inner.active {
+  animation-duration: 3s;
+  animation-name: wobble2;
+}
+
+@keyframes wobble {
+  from {
+    transform: translate(0, 130px) rotate(-35deg);
+  }
+  50% {
+    transform: translate(0, 130px) rotate(35deg);
+  }
+  to {
+    transform: translate(0, 130px) rotate(-35deg);
+  }
+}
+
+@keyframes wobble2 {
+  from {
+    transform: translate(83px, -83px) rotate(-35deg);
+  }
+  75% {
+    transform: translate(83px, -83px) rotate(360deg);
+  }
+  85% {
+    transform: translate(83px, -83px) rotate(-45deg);
+  }
+  95% {
+    transform: translate(83px, -83px) rotate(-40deg);
+  }
+  to {
+    transform: translate(83px, -83px) rotate(-35deg);
+  }
+}

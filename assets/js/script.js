@@ -36,4 +36,9 @@ function burgerClickHandler(burger) {
   toggleClass(burger, "active");
 }
 
+function homeElClickHandler(homeEl) {
+  toggleClass(homeEl, "active");
+  toggleClass(homeEl.parentNode.querySelector(".home-circ-inner"), "active");
+}
+
 ready(() => {});
