@@ -41,11 +41,13 @@ nav {
   width: 50%;
   transform: translate(100%);
   transition: transform 0.5s ease-in;
+  z-index: 6;
 }
 
 .nav-links li {
   list-style: none;
   opacity: 0;
+  text-transform: capitalize;
 }
 
 .nav-links a {
