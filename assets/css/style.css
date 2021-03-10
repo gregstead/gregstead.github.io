@@ -1,5 +1,7 @@
 :root {
   --navbar-height: 8vh;
+  --dark-grey: rgb(61, 67, 71);
+  --blue-primary: #88ddfc;
 }
 
 * {
@@ -11,12 +13,12 @@
 body {
   overflow-x: hidden;
   font-family: Helvetica, sans-serif;
-  color: rgb(61, 67, 71);
+  color: var(--dark-grey);
 }
 
 a {
   text-decoration: none;
-  color: #88ddfc;
+  color: var(--blue-primary);
 }
 
 .container {

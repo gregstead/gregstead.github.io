@@ -5,7 +5,7 @@
 .burger-line {
   width: 25px;
   height: 3px;
-  background-color: rgb(61, 67, 71);
+  background-color: var(--dark-grey);
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s ease;

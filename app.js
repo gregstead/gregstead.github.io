@@ -13,8 +13,8 @@ import Utils from "./services/utils/index.js";
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-  "/": About,
-  "/home": About,
+  "/": Home,
+  "/home": Home,
   "/about": About,
   "/projects": Projects,
   "/resume": Resume,
