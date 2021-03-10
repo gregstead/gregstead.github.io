@@ -6,32 +6,20 @@ const projectCardsData = [
     image: "./assets/images/islandGuru_logo.png",
     deployedLink: "https://island-guru.herokuapp.com/",
     githubLink: "https://github.com/gregstead/island_guru/",
-    description: `An Animal Crossing 🦁 New Horizon React App that will display information useful in the game.`,
-  },
-  {
-    title: "Eat Da Burger",
-    image: "./assets/images/eatdaburger_image.png",
-    deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
-    githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
-    description: `This app takes a name from user and creates a burger on a
-        database. The burger can them be "devoured." The page will
-        render a list of burgers available to devour and burgers that
-        have been devoured.`,
-  },
-  {
-    title: "Discomfort Zone",
-    image: "./assets/images/discomfort_zone4x3.png",
-    deployedLink: "https://megangerwick.github.io/discomfort_zone/",
-    githubLink: "https://github.com/gregstead/discomfort_zone",
-    description: `Discomfort Zone uses a default location starting in KC or
-    confirms default location based on user’s browser. The user
-    will enter a street address and how far they are willing to
-    travel. Discomfort Zone will then list the several restaurants
-    on the edge of the area that the user is willing to travel to.
+    description: `I built the back end for an Animal Crossing New Horizons React App that displays information useful in the game. Users can log in, search for information about game items, look up game characters, and favorite items.
     <br /><br />
-    This project was created as the first project for the
-    part-time coding bootcamp at the University of Kansas by Megan
-    Gerwick, Biaka Zaidarhzauva, and Greg Stead`,
+    This project was created as the capstone project for the
+    Full Stack Coding Bootcamp at the University of Kansas by Michelle McConville, Kendra Hallam, and Greg Stead`,
+  },
+  {
+    title: "Leave a Note",
+    image: "./assets/images/leaveANote_logo.png",
+    deployedLink: "https://project-leave-a-note.herokuapp.com/",
+    githubLink: "https://github.com/gregstead/Leave_A_Note",
+    description: `I built out the database and backend functionality for Leave A Note, an app that allows users to log in and leave a note for their groups. It also allows them to view notes left for them by other users in their group.
+    <br /><br />
+    This project was created as the second milestone project for the
+    Full Stack Coding Bootcamp at the University of Kansas by Raihan Akter, Ben Galloway, Julian Huynh, and Greg Stead`,
   },
   {
     title: "Employee Tracker",
@@ -42,6 +30,23 @@ const projectCardsData = [
     description: `A content management system command line interface to make it
     easier for employers to manage the departments, roles, and
     employees in their companies.`,
+  },
+  {
+    title: "Weather Dashboard",
+    image: "./assets/images/weather_dashboard.png",
+    deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
+    githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
+    description: `A simple weather dashboard built with Materialize and OpenWeatherMap APIs`,
+  },
+  {
+    title: "Eat Da Burger",
+    image: "./assets/images/eatdaburger_image.png",
+    deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
+    githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
+    description: `This app takes a name from user and creates a burger on a
+        database. The burger can them be "devoured." The page will
+        render a list of burgers available to devour and burgers that
+        have been devoured.`,
   },
 ];
 
