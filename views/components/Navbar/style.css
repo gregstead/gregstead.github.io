@@ -5,7 +5,7 @@
 .burger-line {
   width: 25px;
   height: 3px;
-  background-color: black;
+  background-color: rgb(61, 67, 71);
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -29,7 +29,7 @@ nav {
 
 .nav-links {
   background-color: white;
-  opacity: 50%;
+  opacity: 90%;
   position: fixed;
   right: 0px;
   height: 92vh;
@@ -37,6 +37,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   width: 50%;
   transform: translate(100%);
   transition: transform 0.5s ease-in;
@@ -55,7 +56,7 @@ nav {
 }
 
 .nav-active {
-  transform: translate(-50%);
+  transform: translate(-20%);
 }
 
 @keyframes navLinkFade {
