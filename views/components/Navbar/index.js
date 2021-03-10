@@ -10,7 +10,7 @@ let Navbar = {
                 <h4>Greg Stead</h4>
             </div>
             <ul class="nav-links">
-            <li><a href="/#/home">home</a></li>
+            
                 <li><a href="/#/about">about</a></li>
                 <li><a href="/#/projects">projects</a></li>
                 <li><a href="/#/resume">resume</a></li>
