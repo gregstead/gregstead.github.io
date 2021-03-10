@@ -2,6 +2,13 @@ import ProjectCard from "../../components/ProjectCard/index.js";
 
 const projectCardsData = [
   {
+    title: "Island Guru",
+    image: "./assets/images/islandGuru_logo.png",
+    deployedLink: "https://island-guru.herokuapp.com/",
+    githubLink: "https://github.com/gregstead/island_guru/",
+    description: `An Animal Crossing 🦁 New Horizon React App that will display information useful in the game.`,
+  },
+  {
     title: "Eat Da Burger",
     image: "./assets/images/eatdaburger_image.png",
     deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
