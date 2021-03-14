@@ -1,3 +1,7 @@
+/* :root {
+  --navbar-height-tablet: 20vh;
+}
+
 .burger {
   display: block;
 }
@@ -32,7 +36,7 @@ nav {
   opacity: 90%;
   position: fixed;
   right: 0px;
-  height: 92vh;
+  height: calc(100vh - var(--navbar-height));
   top: var(--navbar-height);
   display: flex;
   flex-direction: column;
@@ -81,3 +85,56 @@ nav {
 .active #burger-line-3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+
+/* Tablet and larger */
+@media only screen and (min-width: 425px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--navbar-height-tablet);
+    background-color: auto;
+    position: auto;
+    top: auto;
+    left: auto;
+    width: auto;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .nav-links {
+    background-color: ;
+    opacity: 1;
+    position: auto;
+    right: auto;
+    height: auto;
+    top: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: auto;
+    justify-content: auto;
+    width: auto;
+    transform: translate(0%);
+    transition: ;
+    z-index: 1;
+  }
+
+  .nav-links li {
+    list-style: auto;
+    opacity: auto;
+    text-transform: auto;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    letter-spacing: auto;
+    font-weight: auto;
+    font-size: auto;
+  }
+} */
