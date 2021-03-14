@@ -18,3 +18,22 @@
   margin-left: 1em;
   font-size: 15px;
 }
+
+/* Tablet and larger */
+@media only screen and (min-width: 425px) {
+  body {
+    background-color: grey;
+  }
+  .container.res-container {
+    transition: ease-in 0.3s;
+    max-width: 375px;
+    background-color: white;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  #resEl {
+    margin-top: 50px;
+  }
+}

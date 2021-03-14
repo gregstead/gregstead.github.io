@@ -6,7 +6,7 @@ let Resume = {
   render: async () => {
     let view = `
       <section class="section">
-      <div class="container">
+      <div id="resEl" class="container res-container">
       <div class="res-body">
         <section class="res-section">
           <h4 class="res-heading">Technical Proficiencies</h4>

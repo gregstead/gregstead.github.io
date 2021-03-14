@@ -30,8 +30,8 @@
  display: block;
  background: #000;
  height: 2px;
- width: 2em;
- border-radius: 2px;
+ width: 1.5em;
+ border-radius: 50%;
  margin-top: 5px;
 }
 

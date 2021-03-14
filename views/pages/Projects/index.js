@@ -1,3 +1,7 @@
+// Link CSS module
+const styleSrc = "./views/pages/Projects/style.css";
+document.head.innerHTML += `<link type="text/css" rel="stylesheet" href="${styleSrc}"> `;
+
 import ProjectCard from "../../components/ProjectCard/index.js";
 
 const projectCardsData = [
@@ -60,7 +64,7 @@ const Projects = {
   render: async () => {
     const view = `
       <!-- Projects Section -->
-      <section id="projectsEl" class="container">
+      <section id="projectsEl" class="container projects-container">
         <div>${projectCards}</div>
       </section>
     `;
