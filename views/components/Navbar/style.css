@@ -10,6 +10,10 @@
   z-index: 999;
 }
 
+.logo {
+  padding: .5em;
+}
+
 .nav-toggle {
   display: none;
 }

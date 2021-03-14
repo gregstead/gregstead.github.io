@@ -22,6 +22,11 @@
   padding: 10px;
 }
 
+
+div.centered-child {
+  text-align: center;
+}
+
 .rounded {
   border-radius: 50%;
 }
