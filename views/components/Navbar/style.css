@@ -73,6 +73,20 @@ nav a:hover {
   transform: scale(1,1)
 }
 
+.nav-toggle ~ .nav-toggle-label span#burger-top{
+  
+  transition: 0.5s ease-in;
+}
+
+.nav-toggle ~ .nav-toggle-label span#burger-middle {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.nav-toggle ~ .nav-toggle-label span#burger-bottom {
+  transition: 0.5s ease-in;
+}
+
 .nav-toggle:checked ~ .nav-toggle-label span#burger-top{
   
   transform: rotate(-45deg) translate(-5px, 5px);
@@ -94,6 +108,7 @@ nav a:hover {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
+
 
 @media screen and (min-width: 768px) {
   .nav-toggle-label {
