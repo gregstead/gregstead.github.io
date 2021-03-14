@@ -19,7 +19,9 @@ let Navbar = {
             </ul>
           </nav>
           <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
+          <span id="burger-top"></span>
+          <span id="burger-middle"></span>
+          <span id="burger-bottom"></span>
           </label>
   </header>`;
     return view;
