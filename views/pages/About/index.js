@@ -34,7 +34,7 @@ const About = {
                 </a>Symphony Orchestras.
             </p>
         </div>
-        <div class="centered-child">
+        <div class="centered-child p-3">
             <a class="p-3 is-size-1" href="https://www.linkedin.com/in/gregstead/" target="_blank"
                 rel="noopener noreferrer"><i id="fa-linkedin-in" class="fab fa-linkedin-in"></i></a>
             <a class="p-3 is-size-1" href="https://github.com/gregstead" target="_blank" rel="noopener noreferrer"><i
