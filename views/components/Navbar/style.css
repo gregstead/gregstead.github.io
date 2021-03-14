@@ -119,7 +119,7 @@ nav a:hover {
     grid-template-columns: 1fr auto minmax(400px, 1fr) 1fr;
   }
   .logo {
-    grid-column: 2/ span 1;
+    grid-column: 2/3;
   }
 
   nav {
@@ -132,11 +132,34 @@ nav a:hover {
 
   nav a {
     opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right:0;
+    transform: scale(0,1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1)
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
   }
 
   nav ul {
     display: flex;
-    justify-content: flex-end;
-    border: 1px solid red;
+    justify-content:flex-end;
+    align-items: center;
   }
 }
