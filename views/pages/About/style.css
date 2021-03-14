@@ -3,7 +3,11 @@
   margin-bottom: 10px;
 }
 
-.centered-child {
+.container.about-container {
+  background-color: white;
+}
+
+.main-image {
   text-align: center;
 }
 
@@ -23,9 +27,17 @@
 }
 
 /* Tablet and larger */
-@media only screen and (min-width: 768px) {
-  .centered-child {
-    float: left;
+@media only screen and (min-width: 425px) {
+  body {
+    background-color: grey;
+  }
+  .container.about-container {
+    transition: ease-in 0.3s;
+    max-width: 375px;
+    background-color: white;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   #aboutEl {

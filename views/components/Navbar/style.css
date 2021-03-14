@@ -1,83 +1,165 @@
-.burger {
-  display: block;
+:root {
+  --nav-bg-color: #FFF;
 }
 
-.burger-line {
-  width: 25px;
-  height: 3px;
-  background-color: var(--dark-grey);
-  margin: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: var(--navbar-height);
-  background-color: #e4e4e4;
+#header_container {
+  background-color: var(--nav-bg-color);
+  text-align: center;
   position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-}
-
-.logo {
-  font-size: 30px;
-}
-
-.nav-links {
-  background-color: white;
-  opacity: 90%;
-  position: fixed;
-  right: 0px;
-  height: 92vh;
-  top: var(--navbar-height);
+  margin-left: 1em;
+  margin-top: .3em;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  width: 50%;
-  transform: translate(100%);
-  transition: transform 0.5s ease-in;
-  z-index: 6;
 }
 
-.nav-links li {
+.nav-toggle-label span {
+ display: block;
+ background: #000;
+ height: 2px;
+ width: 2em;
+ border-radius: 2px;
+ margin-top: 5px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--nav-bg-color);
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
-  opacity: 0;
-  text-transform: capitalize;
 }
 
-.nav-links a {
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
   text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.nav-active {
-  transform: translate(-20%);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-.active #burger-line-1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-.active #burger-line-2 {
   opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
-.active #burger-line-3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+
+nav a:hover {
+  color: #000;
+}
+
+/* Looking for any preceeding sibling nav  */
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1)
+}
+
+.nav-toggle ~ .nav-toggle-label span#burger-top{
+  
+  transition: 0.5s ease-in;
+}
+
+.nav-toggle ~ .nav-toggle-label span#burger-middle {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.nav-toggle ~ .nav-toggle-label span#burger-bottom {
+  transition: 0.5s ease-in;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span#burger-top{
+  
+  transform: rotate(-45deg) translate(-5px, 5px);
+  transition: transform 0.5s ease-in;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span#burger-middle {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span#burger-bottom {
+  transform: rotate(45deg) translate(-5px, -5px);
+  transition: transform 0.5s ease-in;
+}
+
+/* nav links that are a sibling of nav toggle when checked */
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+@media screen and (min-width: 768px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(400px, 1fr) 1fr;
+  }
+  .logo {
+    grid-column: 2/3;
+  }
+
+  nav {
+    all: unset;
+    grid-column : 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right:0;
+    transform: scale(0,1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1)
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+  }
 }

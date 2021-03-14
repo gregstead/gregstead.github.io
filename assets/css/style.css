@@ -10,6 +10,12 @@
   box-sizing: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   overflow-x: hidden;
   font-family: Helvetica, sans-serif;
@@ -31,6 +37,6 @@ a {
   margin-left: auto;
 }
 
-#page_container {
+/* #page_container {
   margin-top: var(--navbar-height);
-}
+} */

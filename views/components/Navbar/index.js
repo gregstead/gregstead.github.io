@@ -5,22 +5,25 @@ document.head.innerHTML += `<link type="text/css" rel="stylesheet" href="${style
 let Navbar = {
   render: async () => {
     let view = `
-    <nav>
+    <header>
             <div class="logo">
-                <h4>Greg Stead</h4>
+                <h1>Greg Stead</h4>
             </div>
-            <ul class="nav-links">
+            <input type="checkbox" class="nav-toggle" id="nav-toggle"/>
+            <nav>
+            <ul class="header-links">
             
                 <li><a href="/#/about">about</a></li>
                 <li><a href="/#/projects">projects</a></li>
                 <li><a href="/#/resume">resume</a></li>
             </ul>
-            <div class="burger" onClick="burgerClickHandler(this)">
-                <div class="burger-line" id="burger-line-1"></div>
-                <div class="burger-line" id="burger-line-2"></div>
-                <div class="burger-line" id="burger-line-3"></div>
-            </div>
-        </nav>`;
+          </nav>
+          <label for="nav-toggle" class="nav-toggle-label">
+          <span id="burger-top"></span>
+          <span id="burger-middle"></span>
+          <span id="burger-bottom"></span>
+          </label>
+  </header>`;
     return view;
   },
   after_render: async () => {},
