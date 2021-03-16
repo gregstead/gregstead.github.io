@@ -37,3 +37,13 @@ a {
   margin-left: auto;
 }
 
+div#page_container {
+  padding-top: 8vh
+}
+
+/* Tablet and larger */
+@media only screen and (min-width: 425px) {
+  div#page-container {
+    padding-top: unset
+  }
+}

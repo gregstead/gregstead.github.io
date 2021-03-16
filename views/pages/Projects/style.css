@@ -13,8 +13,9 @@
       padding-right: 1rem;
       padding-left: 1rem;
     }
-  
+    
     #projectsEl {
-      margin-top: 50px;
+      padding-bottom: 50px;
+      margin-bottom: 50px
     }
   }
