@@ -1,7 +1,7 @@
 .project-card-image-container {
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .project-card-image {
@@ -10,6 +10,19 @@
   object-fit: contain;
 }
 
-div.content {
+div.project-card-content {
   padding-bottom: 10px;
+}
+
+.skinny {
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
