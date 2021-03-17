@@ -49,9 +49,10 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
-
+p {
+  padding-inline: 1em;
+}
 .container {
-  width: 95%;
   padding-top: 0.25rem;
   padding-right: 0.25rem;
   padding-left: 0.25rem;
@@ -62,6 +63,10 @@ h3 {
 
 div#page_container {
   padding-top: 11vh;
+}
+
+.container {
+  padding: 0.5em;
 }
 
 /* Tablet and larger */

@@ -13,3 +13,16 @@
 div.project-card-content {
   padding-bottom: 10px;
 }
+
+.skinny {
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}

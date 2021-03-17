@@ -7,10 +7,9 @@ let Resume = {
     let view = `
       <section class="section">
       <div id="resEl" class="container res-container">
-      <div class="res-body">
         <section class="res-section">
-          <h4 class="res-heading">Technical Proficiencies</h4>
-          <p class="res-text">JavaScript, HTML, CSS, Node, Express, React, MySQL, MongoDB, Python, Git</p>
+          <h4 class="res-heading">Technical Skills</h4>
+          <p class="res-text">JavaScript, HTML, CSS, Bootstrap,  React.js, Node.js, Express.js, MySQL, MongoDb, Python, Git, Heroku,</p>
         </section>
         <section class="res-section">
           <h4 class="res-heading">Recent Work Experience</h4>
@@ -52,7 +51,6 @@ let Resume = {
             <p class="res-text">Florida State University; Tallahassee, Florida</p>
           </div>
         </section>
-      </div>
     </div>
       
       </section>

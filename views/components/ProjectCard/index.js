@@ -21,15 +21,15 @@ function ProjectCard(projectObject) {
       <div class="project-card-content">
         <div>
           <div>
-            <h2>${projectObject.title}</h2>
-            <h3>
+            <h3>${projectObject.title}</h3>
+            <h4>
               <a href="${projectObject.deployedLink}" target="_blank" rel="noopener noreferrer">deployed app </a>
               <span class="skinny">||</span>
               <a href="${projectObject.githubLink}" target="_blank" rel="noopener noreferrer">GitHub repo</a>
-            </h3>
+            </h4>
           </div>
         </div>
-        <div>${projectObject.description}</div>
+        <div><p>${projectObject.description}</p></div>
       </div>
     </div>
     <hr>
