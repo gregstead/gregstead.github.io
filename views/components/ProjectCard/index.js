@@ -19,16 +19,17 @@ function ProjectCard(projectObject) {
         </figure>
       </div>
       <div class="project-card-content">
-        <div class="media">
-          <div class="media-content">
-            <p class="title is-4">${projectObject.title}</p>
-            <p class="subtitle is-6">
-              <a href="${projectObject.deployedLink}" target="_blank" rel="noopener noreferrer">deployed app </a>||
+        <div>
+          <div>
+            <h2>${projectObject.title}</h2>
+            <h3>
+              <a href="${projectObject.deployedLink}" target="_blank" rel="noopener noreferrer">deployed app </a>
+              <span class="skinny">||</span>
               <a href="${projectObject.githubLink}" target="_blank" rel="noopener noreferrer">GitHub repo</a>
-            </p>
+            </h3>
           </div>
         </div>
-        <div class="content">${projectObject.description}</div>
+        <div>${projectObject.description}</div>
       </div>
     </div>
     <hr>

@@ -1,6 +1,6 @@
 :root {
   --navbar-height: 8vh;
-  --dark-grey: rgb(61, 67, 71);
+  --dark-grey: #555;
   --blue-primary: #88ddfc;
 }
 
@@ -20,11 +20,34 @@ body {
   overflow-x: hidden;
   font-family: Helvetica, sans-serif;
   color: var(--dark-grey);
+  line-height: 1.5;
 }
 
 a {
   text-decoration: none;
   color: var(--blue-primary);
+}
+
+a:hover {
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  color: #000;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 .container {
@@ -38,12 +61,12 @@ a {
 }
 
 div#page_container {
-  padding-top: 8vh
+  padding-top: 11vh;
 }
 
 /* Tablet and larger */
 @media only screen and (min-width: 425px) {
   div#page-container {
-    padding-top: unset
+    padding-top: unset;
   }
 }
