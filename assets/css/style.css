@@ -1,7 +1,10 @@
 :root {
-  --navbar-height: 8vh;
-  --dark-grey: #555;
-  --blue-primary: #88ddfc;
+  --paper-white-100: #f7f7f5;
+  --paper-white-200: #f0f0ed;
+  --paper-white-300: #e0e0db;
+  --grey-900: #212120;
+  --grey-800: #20201f;
+  --grey-700: #3f3f3c;
 }
 
 * {
@@ -19,8 +22,9 @@
 body {
   overflow-x: hidden;
   font-family: Helvetica, sans-serif;
-  color: var(--dark-grey);
+  color: var(--grey-800);
   line-height: 1.5;
+  background-color: var(--paper-white-100);
 }
 
 a {
@@ -29,13 +33,13 @@ a {
 }
 
 a:hover {
-  font-weight: 500;
+  font-weight: 900;
 }
 
 h1,
 h2,
 h3 {
-  color: #000;
+  color:var(--grey-900);
 }
 
 h1 {
@@ -49,8 +53,9 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
+
 p {
-  padding-inline: 1em;
+  font-size: 1.2rem
 }
 .container {
   padding-top: 0.25rem;
@@ -73,5 +78,51 @@ div#page_container {
 @media only screen and (min-width: 425px) {
   div#page-container {
     padding-top: unset;
+  }
+}
+
+.noise {
+  animation: grain 8s steps(10) infinite;
+  display: block;
+  position: fixed;
+  top: -100%;
+  left: -50%;
+  z-index: -1;
+  width: 200%;
+  height: 300%;
+  opacity: 0.3;
+  background-image: url("./../images/paper_1.png");
+}
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, -20%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
   }
 }

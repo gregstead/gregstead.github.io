@@ -1,9 +1,6 @@
-:root {
-  --nav-bg-color: #fff;
-}
+
 
 #header_container {
-  background-color: var(--nav-bg-color);
   text-align: center;
   position: fixed;
   width: 100%;
