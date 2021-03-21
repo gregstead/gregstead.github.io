@@ -20,6 +20,11 @@ div.project-card-content {
 
 h3 {
   font-size: 2rem;
+  color: var(--grey-900);
+}
+
+h4 {
+  color: var(--grey-900);
 }
 
 p {

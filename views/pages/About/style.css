@@ -1,30 +1,37 @@
-.about-text p {
-  margin-top: 10px;
-  margin-bottom: 10px;
+div.about-text {
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
-.container.about-container {
-  background-color: white;
+div.about-text hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .main-image {
   text-align: center;
 }
 
-.is-size-1 {
-  font-size: 40px;
-}
-.p-3 {
-  padding: 15px;
-}
-
-.p-5 {
-  padding: 10px;
-}
-
+#about-image {
+filter: grayscale(1);
+width: 100%;
+height: 100%;
+margin-top: 5em;
+margin-bottom: 5em;
+max-width: 99%;}
 
 div.centered-child {
   text-align: center;
+}
+
+.socio-icons {
+  font-size: 2.5rem;
+  margin-bottom: 2em;
+}
+
+i {
+  margin-left: .5em;
+  margin-right: .5em;
 }
 
 .rounded {
@@ -33,13 +40,9 @@ div.centered-child {
 
 /* Tablet and larger */
 @media only screen and (min-width: 425px) {
-  body {
-    background-color: grey;
-  }
   .container.about-container {
     transition: ease-in 0.3s;
-    max-width: 375px;
-    background-color: white;
+    max-width: 571px;
     padding-top: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;

@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --home-square-size: 200px;
   --home-square-inner-size: 150px;
 }
@@ -68,4 +68,40 @@ div.home-circ-inner.active {
   to {
     transform: translate(83px, -83px) rotate(-35deg);
   }
+} */
+
+:root {
+  --cube-size: 100px;
+}
+
+div.cube {
+  width: var(--cube-size);
+  height: var(--cube-size);
+  background-color: #555;
+  position: relative;
+  margin: 50px;
+}
+
+div.cube::before {
+  content: "";
+  display: inline-block;
+  background-color: #222;
+  width: var(--cube-size);
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  left: 8px;
+  transform: skewX(-40deg);
+}
+
+div.cube::after {
+  content: "";
+  display: inline-block;
+  background-color: #aaa;
+  width: 16px;
+  height: var(--cube-size);
+  position: absolute;
+  top: -10px;
+  left: 100%;
+  transform: skewY(-50deg);
 }

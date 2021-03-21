@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
 :root {
-  --navbar-height: 8vh;
-  --dark-grey: #555;
-  --blue-primary: #88ddfc;
+  --paper-white-100: #f7f7f5;
+  --paper-white-200: #f0f0ed;
+  --paper-white-300: #e0e0db;
+  --grey-900: #212120;
+  --grey-800: #20201f;
+  --grey-700: #3f3f3c;
+
+  --accent-font: 'Poppins', sans-serif;
+  --regular-font: 'Open Sans', sans-serif;
 }
 
 * {
@@ -18,24 +26,21 @@
 
 body {
   overflow-x: hidden;
-  font-family: Helvetica, sans-serif;
-  color: var(--dark-grey);
   line-height: 1.5;
+  font-family: var(--regular-font);
+  transition: 0.5s ease-in-out
 }
+
 
 a {
   text-decoration: none;
-  color: var(--blue-primary);
 }
 
-a:hover {
-  font-weight: 500;
-}
 
 h1,
 h2,
 h3 {
-  color: #000;
+  font-family: var(--accent-font);
 }
 
 h1 {
@@ -49,9 +54,46 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
+
 p {
-  padding-inline: 1em;
+  font-size: 1.2rem;
 }
+
+.body-light {
+  color: var(--grey-800);
+  background-color: var(--paper-white-100);
+}
+
+.body-light h1, h2, h3, h4 {
+  color: var(--grey-900);
+}
+
+.body-light a {
+  color: var(--grey-700)
+}
+
+.body-light a:hover {
+  color: var(--grey-900);
+}
+
+.body-dark {
+  color: var(--paper-white-300);
+}
+
+.body-dark h1, h2, h3, h4 {
+  color: unset;
+  color: var(--paper-white-100);
+}
+
+.body-dark a {
+  color: var(--paper-white-200)
+}
+
+.body-dark a:hover {
+  color: var(--paper-white-100);
+}
+
+
 .container {
   padding-top: 0.25rem;
   padding-right: 0.25rem;
@@ -73,5 +115,60 @@ div#page_container {
 @media only screen and (min-width: 425px) {
   div#page-container {
     padding-top: unset;
+  }
+}
+
+.noise {
+  animation: grain 8s steps(10) infinite;
+  display: block;
+  position: fixed;
+  top: -100%;
+  left: -50%;
+  z-index: -1;
+  width: 200%;
+  height: 300%;
+  opacity: 0.4;
+  transition: 250ms ease-in;
+}
+
+.noise-light {
+  background-image: url("./../images/paper_1.png");
+}
+
+.noise-dark {
+  opacity: 1;
+  background-image: url("./../images/broken_noise.png");
+}
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, -20%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
   }
 }

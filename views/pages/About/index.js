@@ -6,15 +6,14 @@ const About = {
   render: async () => {
     const view = `
     <section id="aboutEl" class="container about-container">
-    <div class="about-wrapper">
-        <div class="columns">
+    
             <div class="main-image">
-                <img src="./assets/images/0.jpeg" alt="Greg Stead headshot" class="rounded m-0 p-5" />
+                <img id="about-image" src="./assets/images/greg_kelce_kisses.jpeg" alt="Greg and his dog Kelce" class="m-0 p-5" />
             </div>
-        </div>
+        
 
         <div class="about-text">
-            <p>Hi, I'm Greg! I am a full stack web developer in Overland Park, Kansas.I bring a wide breadth of
+            <p id="first-paragraph">Hi, I'm Greg! I am a web developer in Overland Park, Kansas.I bring a wide breadth of
                 knowledge,
                 experience, and creativity to
                 collaborative problem-solving. Currently, I help deliver innovation, value, and the best possible
@@ -24,7 +23,7 @@ const About = {
                     Connect</a>
             </p>
             <hr>
-            <p>I am also an avid musician and freelance as an oboist in the Kansas City metro. I have
+            <p id="second-paragraph">I am also an avid musician and freelance as an oboist in the Kansas City metro. I have
                 performed with the <a href="https://www.kcsymphony.org/" target="_blank"
                     rel="noopener noreferrer">Kansas
                     City
@@ -34,7 +33,7 @@ const About = {
                 </a>Symphony Orchestras.
             </p>
         </div>
-        <div class="centered-child p-3">
+        <div class="centered-child socio-icons">
             <a class="p-3 is-size-1" href="https://www.linkedin.com/in/gregstead/" target="_blank"
                 rel="noopener noreferrer"><i id="fa-linkedin-in" class="fab fa-linkedin-in"></i></a>
             <a class="p-3 is-size-1" href="https://github.com/gregstead" target="_blank" rel="noopener noreferrer"><i
@@ -42,7 +41,6 @@ const About = {
             <a class="p-3 is-size-1" href="https://twitter.com/soylentgreg" target="_blank" rel="noopener noreferrer"><i
                     id="fa-twitter" class="fab fa-twitter"></i></a>
         </div>
-    </div>
 
 </section>
     `;
