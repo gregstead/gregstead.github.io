@@ -16,7 +16,7 @@ let Navbar = {
   },
   after_render: async () => {
     const logo = document.querySelector(".logo h1");
-    const background = document.getElementsByTagName("canvas");
+    const background = document.querySelector("canvas#canvas");
 
     const aboutEl = document.querySelector(".about-text").getClientRects()[0];
 
@@ -30,11 +30,19 @@ let Navbar = {
       }
       if (scrollY >= aboutEl.y && scrollY < aboutEl.bottom) {
         logo.innerText = "About";
-        toggleClass(background, "noise-dark");
       }
     }
+
+    function darkThemeToggle(scrollY) {
+      if (scrollY >= aboutEl.y) {
+        background.classList.add("noise-dark");
+        background.classList.remove("noise-light");
+      }
+    }
+
     document.addEventListener("scroll", () => {
       logoText(window.scrollY);
+      darkThemeToggle(scrollY);
     });
   },
 };
