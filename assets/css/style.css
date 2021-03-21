@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
 :root {
   --paper-white-100: #f7f7f5;
   --paper-white-200: #f0f0ed;
@@ -5,6 +7,9 @@
   --grey-900: #212120;
   --grey-800: #20201f;
   --grey-700: #3f3f3c;
+
+  --accent-font: 'Poppins', sans-serif;
+  --regular-font: 'Open Sans', sans-serif;
 }
 
 * {
@@ -21,25 +26,29 @@
 
 body {
   overflow-x: hidden;
-  font-family: Helvetica, sans-serif;
-  color: var(--grey-800);
   line-height: 1.5;
+  font-family: var(--regular-font)
+}
+
+.body-light {
+  color: var(--grey-800);
   background-color: var(--paper-white-100);
 }
 
 a {
   text-decoration: none;
-  color: var(--blue-primary);
+  color: var(--grey-700)
 }
 
 a:hover {
-  font-weight: 900;
+  color: var(--grey-900);
 }
 
 h1,
 h2,
 h3 {
-  color:var(--grey-900);
+  font-family: var(--accent-font);
+  color: var(--grey-900);
 }
 
 h1 {
@@ -91,6 +100,9 @@ div#page_container {
   width: 200%;
   height: 300%;
   opacity: 0.3;
+}
+
+.noise-light {
   background-image: url("./../images/paper_1.png");
 }
 

@@ -18,13 +18,13 @@ const router = async () => {
 
   // Render the Header and footer of the page
   header.innerHTML = await Navbar.render();
-  await Navbar.after_render();
   const content_data =
     (await About.render()) +
     (await Projects.render()) +
     (await Resume.render());
   content.innerHTML = content_data;
   footer.innerHTML = await Bottombar.render();
+  await Navbar.after_render();
   await Bottombar.after_render();
 };
 

@@ -4,39 +4,17 @@
   text-align: center;
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: -1;
 }
 
 .logo {
   padding: 0.5em;
+  z-index: -2;
+  mix-blend-mode: exclusion(0);
 }
 
 .nav-toggle {
   display: none;
-}
-
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 6%;
-  margin-top: 6%;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 999;
-}
-
-.nav-toggle-label span {
-  display: block;
-  background: #000;
-  height: 2px;
-  width: 1.5em;
-  border-radius: 25%;
-  margin-top: 5px;
 }
 
 nav {
@@ -52,116 +30,4 @@ nav {
   transition: transform 400ms ease-in-out;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
-nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
-
-nav a {
-  text-decoration: none;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
-
-nav a:hover {
-  color: #000;
-}
-
-/* Looking for any preceeding sibling nav  */
-.nav-toggle:checked ~ nav {
-  transform: scale(1, 1);
-}
-
-.nav-toggle ~ .nav-toggle-label span#burger-top {
-  transition: 250ms ease-in;
-}
-
-.nav-toggle ~ .nav-toggle-label span#burger-middle {
-  opacity: 1;
-  transition: opacity 250ms ease-in;
-}
-
-.nav-toggle ~ .nav-toggle-label span#burger-bottom {
-  transition: 250ms ease-in;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span#burger-top {
-  transform: rotate(-45deg) translate(-5px, 5px);
-  transition: transform 250ms ease-in;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span#burger-middle {
-  opacity: 0;
-  transition: opacity 250ms ease-in;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span#burger-bottom {
-  transform: rotate(45deg) translate(-5px, -5px);
-  transition: transform 250ms ease-in;
-}
-
-/* nav links that are a sibling of nav toggle when checked */
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-
-@media screen and (min-width: 768px) {
-  .nav-toggle-label {
-    display: none;
-  }
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(400px, 1fr) 1fr;
-  }
-  .logo {
-    grid-column: 2/3;
-  }
-
-  nav {
-    all: unset;
-    grid-column: 3/4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
-
-  nav a::before {
-    content: "";
-    display: block;
-    height: 5px;
-    background: #000;
-    position: absolute;
-    top: -0.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-
-  nav a:hover::before {
-    transform: scale(1, 1);
-  }
-
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-}

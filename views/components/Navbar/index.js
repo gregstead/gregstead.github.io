@@ -10,23 +10,33 @@ let Navbar = {
                 <h1>Greg Stead</h4>
             </div>
             <input type="checkbox" class="nav-toggle" id="nav-toggle"/>
-            <nav>
-            <ul class="header-links">
             
-                <li><a href="/#/about">about</a></li>
-                <li><a href="/#/projects">projects</a></li>
-                <li><a href="/#/resume">resume</a></li>
-            </ul>
-          </nav>
-          <label for="nav-toggle" class="nav-toggle-label">
-          <span id="burger-top"></span>
-          <span id="burger-middle"></span>
-          <span id="burger-bottom"></span>
-          </label>
   </header>`;
     return view;
   },
-  after_render: async () => {},
+  after_render: async () => {
+    const logo = document.querySelector(".logo h1");
+    const background = document.getElementsByTagName("canvas");
+
+    const aboutEl = document.querySelector(".about-text").getClientRects()[0];
+
+    function toggleClass(node, className) {
+      node.classList.toggle(className);
+    }
+
+    function logoText(scrollY) {
+      if (scrollY >= 0 && scrollY < aboutEl.y) {
+        logo.innerText = "Greg Stead";
+      }
+      if (scrollY >= aboutEl.y && scrollY < aboutEl.bottom) {
+        logo.innerText = "About";
+        toggleClass(background, "noise-dark");
+      }
+    }
+    document.addEventListener("scroll", () => {
+      logoText(window.scrollY);
+    });
+  },
 };
 
 export default Navbar;
