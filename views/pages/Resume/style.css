@@ -1,3 +1,13 @@
+#last-picture {
+  height: 50%;
+  width: 50%;
+  filter: grayscale();
+}
+
+#resEl {
+  padding-top: 10em;
+}
+
 .res-heading {
   font-size: 1.6rem;
 }

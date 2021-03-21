@@ -6,7 +6,8 @@ let Footer = {
   render: async () => {
     let view = `
       <footer>
-        <div></div>
+        <div>
+        </div>
       </footer>
     `;
     return view;

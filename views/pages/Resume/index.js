@@ -51,8 +51,10 @@ let Resume = {
             <p class="res-text">Florida State University; Tallahassee, Florida</p>
           </div>
         </section>
+        <div class="centered-child">
+        <img src="./../../assets/images/greg_kelce_walk.jpeg" id="last-picture"/>
+        </div>
     </div>
-      
       </section>
     `;
     return view;
