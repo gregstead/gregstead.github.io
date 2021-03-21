@@ -99,11 +99,17 @@ div#page_container {
   z-index: -1;
   width: 200%;
   height: 300%;
-  opacity: 0.3;
+  opacity: 0.4;
+  transition: 0.5s linear;
 }
 
 .noise-light {
   background-image: url("./../images/paper_1.png");
+}
+
+.noise-dark {
+  opacity: 1;
+  background-image: url("./../images/broken_noise.png");
 }
 
 @keyframes grain {

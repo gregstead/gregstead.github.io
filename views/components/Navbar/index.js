@@ -20,10 +20,6 @@ let Navbar = {
 
     const aboutEl = document.querySelector(".about-text").getClientRects()[0];
 
-    function toggleClass(node, className) {
-      node.classList.toggle(className);
-    }
-
     function logoText(scrollY) {
       if (scrollY >= 0 && scrollY < aboutEl.y) {
         logo.innerText = "Greg Stead";
@@ -34,7 +30,11 @@ let Navbar = {
     }
 
     function darkThemeToggle(scrollY) {
-      if (scrollY >= aboutEl.y) {
+      if (scrollY >= 0 && scrollY < aboutEl.y) {
+        background.classList.add("noise-light");
+        background.classList.remove("noise-dark");
+      }
+      if (scrollY >= aboutEl.y && scrollY < aboutEl.bottom) {
         background.classList.add("noise-dark");
         background.classList.remove("noise-light");
       }
