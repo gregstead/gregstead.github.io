@@ -27,28 +27,20 @@
 body {
   overflow-x: hidden;
   line-height: 1.5;
-  font-family: var(--regular-font)
+  font-family: var(--regular-font);
+  transition: 0.5s ease-in-out
 }
 
-.body-light {
-  color: var(--grey-800);
-  background-color: var(--paper-white-100);
-}
 
 a {
   text-decoration: none;
-  color: var(--grey-700)
 }
 
-a:hover {
-  color: var(--grey-900);
-}
 
 h1,
 h2,
 h3 {
   font-family: var(--accent-font);
-  color: var(--grey-900);
 }
 
 h1 {
@@ -64,8 +56,44 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem
+  font-size: 1.2rem;
 }
+
+.body-light {
+  color: var(--grey-800);
+  background-color: var(--paper-white-100);
+}
+
+.body-light h1, h2, h3, h4 {
+  color: var(--grey-900);
+}
+
+.body-light a {
+  color: var(--grey-700)
+}
+
+.body-light a:hover {
+  color: var(--grey-900);
+}
+
+.body-dark {
+  color: var(--paper-white-300);
+}
+
+.body-dark h1, h2, h3, h4 {
+  color: unset;
+  color: var(--paper-white-100);
+}
+
+.body-dark a {
+  color: var(--paper-white-200)
+}
+
+.body-dark a:hover {
+  color: var(--paper-white-100);
+}
+
+
 .container {
   padding-top: 0.25rem;
   padding-right: 0.25rem;
@@ -100,7 +128,7 @@ div#page_container {
   width: 200%;
   height: 300%;
   opacity: 0.4;
-  transition: 0.5s linear;
+  transition: 250ms ease-in;
 }
 
 .noise-light {

@@ -21,9 +21,10 @@
 @media only screen and (min-width: 425px) {
   .container.res-container {
     transition: ease-in 0.3s;
-    max-width: 375px;
-    background-color: white;
-    padding: 1em;
+  max-width: 571px;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   }
 
   #resEl {

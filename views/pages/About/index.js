@@ -13,7 +13,7 @@ const About = {
         
 
         <div class="about-text">
-            <p>Hi, I'm Greg! I am a full stack web developer in Overland Park, Kansas.I bring a wide breadth of
+            <p id="first-paragraph">Hi, I'm Greg! I am a full stack web developer in Overland Park, Kansas.I bring a wide breadth of
                 knowledge,
                 experience, and creativity to
                 collaborative problem-solving. Currently, I help deliver innovation, value, and the best possible
@@ -23,7 +23,7 @@ const About = {
                     Connect</a>
             </p>
             <hr>
-            <p>I am also an avid musician and freelance as an oboist in the Kansas City metro. I have
+            <p id="second-paragraph">I am also an avid musician and freelance as an oboist in the Kansas City metro. I have
                 performed with the <a href="https://www.kcsymphony.org/" target="_blank"
                     rel="noopener noreferrer">Kansas
                     City

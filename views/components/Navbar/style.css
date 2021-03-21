@@ -9,8 +9,7 @@
 
 .logo {
   padding: 0.5em;
-  z-index: -2;
-  mix-blend-mode: exclusion(0);
+  z-index: -1;
 }
 
 .nav-toggle {

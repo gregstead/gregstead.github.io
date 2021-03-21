@@ -16,33 +16,63 @@ let Navbar = {
   },
   after_render: async () => {
     const logo = document.querySelector(".logo h1");
+    const logoHeight = logo.getClientRects()[0].height;
+    const body = document.querySelector("body");
     const background = document.querySelector("canvas#canvas");
 
-    const aboutEl = document.querySelector(".about-text").getClientRects()[0];
-
-    function logoText(scrollY) {
-      if (scrollY >= 0 && scrollY < aboutEl.y) {
+    function logoText(scrollY, aboutEl, projectsEl, resEl) {
+      if (scrollY >= 0 && scrollY < logoHeight) {
         logo.innerText = "Greg Stead";
       }
-      if (scrollY >= aboutEl.y && scrollY < aboutEl.bottom) {
+      if (aboutEl.y <= 0 && aboutEl.y > aboutEl.height * -1) {
         logo.innerText = "About";
+      }
+      if (projectsEl.y <= logoHeight && projectsEl.y > projectsEl.height * -1) {
+        logo.innerText = "Projects";
+      }
+      if (resEl.y <= logoHeight && resEl.y > resEl.height * -1) {
+        logo.innerText = "Resume";
       }
     }
 
-    function darkThemeToggle(scrollY) {
-      if (scrollY >= 0 && scrollY < aboutEl.y) {
-        background.classList.add("noise-light");
-        background.classList.remove("noise-dark");
+    function switchToDark() {
+      background.classList.add("noise-dark");
+      body.classList.add("body-dark");
+      background.classList.remove("noise-light");
+      body.classList.remove("body-light");
+    }
+
+    function switchToLight() {
+      background.classList.add("noise-light");
+      body.classList.add("body-light");
+      background.classList.remove("noise-dark");
+      body.classList.remove("body-dark");
+    }
+
+    function darkThemeToggle(scrollY, aboutEl, projectsEl, resEl) {
+      if (scrollY >= 0 && scrollY < logoHeight) {
+        switchToLight();
       }
-      if (scrollY >= aboutEl.y && scrollY < aboutEl.bottom) {
-        background.classList.add("noise-dark");
-        background.classList.remove("noise-light");
+      if (aboutEl.y <= 0 && aboutEl.y > aboutEl.height * -1) {
+        switchToDark();
+      }
+      if (projectsEl.y <= logoHeight && projectsEl.y > projectsEl.height * -1) {
+        switchToLight();
+      }
+      if (resEl.y <= logoHeight && resEl.y > resEl.height * -1) {
+        switchToDark();
       }
     }
 
     document.addEventListener("scroll", () => {
-      logoText(window.scrollY);
-      darkThemeToggle(scrollY);
+      const aboutEl = document.querySelector("#aboutEl").getClientRects()[0];
+      const projectsEl = document
+        .querySelector("#projectsEl")
+        .getClientRects()[0];
+      const resEl = document.querySelector("#resEl").getClientRects()[0];
+
+      logoText(window.scrollY, aboutEl, projectsEl, resEl);
+      darkThemeToggle(window.scrollY, aboutEl, projectsEl, resEl);
     });
   },
 };
