@@ -47,7 +47,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-I was encouraged by [this](https://dev.to/rishavs/making-a-single-page-app-in-ye-good-olde-js-es6-3eng) blog post to build it the way I did.
+I was encouraged by [this](https://dev.to/rishavs/making-a-single-page-app-in-ye-good-olde-js-es6-3eng) to build a Vanilla JS singe page application.
 
 ---
 
