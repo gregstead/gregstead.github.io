@@ -1,4 +1,8 @@
 
+#projectsEl {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
 
 /* Tablet and larger */
 @media only screen and (min-width: 425px) {

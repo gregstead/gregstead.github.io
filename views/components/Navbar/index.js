@@ -56,9 +56,6 @@ let Navbar = {
       if (aboutEl.y <= 0 && aboutEl.y > aboutEl.height * -1) {
         switchToDark();
       }
-      if (resEl.y <= logoHeight && resEl.y > resEl.height * -1) {
-        switchToLight();
-      }
     }
 
     document.addEventListener("scroll", () => {
