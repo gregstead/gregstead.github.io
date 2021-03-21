@@ -17,6 +17,14 @@
   font-size: 1rem;
 }
 
+h3 {
+  color: var(--paper-white-100);
+}
+
+h4 {
+  color: var(--paper-white-300);
+}
+
 /* Tablet and larger */
 @media only screen and (min-width: 425px) {
   .container.res-container {

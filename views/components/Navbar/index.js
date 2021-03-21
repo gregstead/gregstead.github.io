@@ -56,11 +56,8 @@ let Navbar = {
       if (aboutEl.y <= 0 && aboutEl.y > aboutEl.height * -1) {
         switchToDark();
       }
-      if (projectsEl.y <= logoHeight && projectsEl.y > projectsEl.height * -1) {
-        switchToLight();
-      }
       if (resEl.y <= logoHeight && resEl.y > resEl.height * -1) {
-        switchToDark();
+        switchToLight();
       }
     }
 
