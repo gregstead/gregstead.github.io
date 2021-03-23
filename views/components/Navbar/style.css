@@ -10,6 +10,13 @@
 .logo {
   padding: 0.5em;
   z-index: -1;
+  transition: 0.25s ease-in-out;
+}
+
+.logo-fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
 }
 
 .nav-toggle {
@@ -29,4 +36,12 @@ nav {
   transition: transform 400ms ease-in-out;
 }
 
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 

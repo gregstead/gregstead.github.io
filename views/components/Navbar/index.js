@@ -7,7 +7,7 @@ let Navbar = {
     let view = `
     <header>
             <div class="logo">
-                <h1>Greg Stead</h4>
+                <h1>Greg Stead</h1>
             </div>
             <input type="checkbox" class="nav-toggle" id="nav-toggle"/>
             
@@ -20,53 +20,95 @@ let Navbar = {
     const body = document.querySelector("body");
     const background = document.querySelector("canvas#canvas");
 
-    function logoText(scrollY, aboutEl, projectsEl, resEl) {
-      if (scrollY >= 0 && scrollY < logoHeight) {
-        logo.innerText = "Greg Stead";
-      }
-      if (aboutEl.y <= 0 && aboutEl.y > aboutEl.height * -1) {
-        logo.innerText = "About";
-      }
-      if (projectsEl.y <= logoHeight && projectsEl.y > projectsEl.height * -1) {
-        logo.innerText = "Projects";
-      }
-      if (resEl.y <= logoHeight && resEl.y > resEl.height * -1) {
-        logo.innerText = "Resume";
-      }
-    }
-
     function switchToDark() {
       background.classList.add("noise-dark");
       body.classList.add("body-dark");
       background.classList.remove("noise-light");
       body.classList.remove("body-light");
     }
-
     function switchToLight() {
       background.classList.add("noise-light");
       body.classList.add("body-light");
       background.classList.remove("noise-dark");
       body.classList.remove("body-dark");
     }
+    function logoFadeOut() {
+      logo.classList.add("logo-fade");
+    }
 
-    function darkThemeToggle(scrollY, aboutEl, projectsEl, resEl) {
-      if (scrollY >= 0 && scrollY < logoHeight) {
-        switchToLight();
-      }
-      if (aboutEl.y <= 0 && aboutEl.y > aboutEl.height * -1) {
-        switchToDark();
-      }
+    function logoFadeIn() {
+      logo.classList.remove("logo-fade");
     }
 
     document.addEventListener("scroll", () => {
-      const aboutEl = document.querySelector("#aboutEl").getClientRects()[0];
-      const projectsEl = document
-        .querySelector("#projectsEl")
-        .getClientRects()[0];
-      const resEl = document.querySelector("#resEl").getClientRects()[0];
+      // Cache DOM
+      const aboutEl = document.querySelector("#aboutEl");
+      const aboutImageTop = aboutEl
+        .querySelector("#about-image")
+        .getClientRects()[0].top;
+      const aboutImageBottom = aboutEl
+        .querySelector("#about-image")
+        .getClientRects()[0].bottom;
+      const aboutTextTop = aboutEl
+        .querySelector("#first-paragraph")
+        .getClientRects()[0].top;
+      const aboutElBottom = aboutEl
+        .querySelector("div.socio-icons")
+        .getClientRects()[0].bottom;
+      const projectsEl = document.querySelector("#projectsEl");
+      const projectsElTop = projectsEl.querySelector("div").getClientRects()[0]
+        .top;
+      const projectsElBottom = projectsEl.getClientRects()[0].bottom;
+      const resEl = document.querySelector("#resEl");
+      const resElBottom = resEl.getClientRects()[0].bottom;
+      const resElTop = resEl.querySelector("h4").getClientRects()[0].top;
 
-      logoText(window.scrollY, aboutEl, projectsEl, resEl);
-      darkThemeToggle(window.scrollY, aboutEl, projectsEl, resEl);
+      // If scroll is between about image and top...
+      if (scrollY >= 0 && aboutImageTop > logoHeight) {
+        // ... set text, fade back in (if out), change (back) to light theme
+        logo.innerText = "Greg Stead";
+        logoFadeIn();
+        switchToLight();
+      }
+      // If image top intersects logo div
+      else if (aboutImageTop < logoHeight && aboutImageBottom > logoHeight) {
+        // ...
+        logoFadeOut();
+        switchToDark();
+      }
+      // If image bottom intersects logo div...
+      else if (aboutImageBottom < logoHeight && aboutTextTop > logoHeight) {
+        // ... set text, fade logo back in,
+        logo.innerText = "About";
+        logoFadeIn();
+      }
+      // If paragraph text ''
+      else if (aboutTextTop < logoHeight && aboutElBottom > logoHeight) {
+        // ...
+        logoFadeOut();
+      }
+      // If about element bottom ''
+      else if (aboutElBottom < 0 && projectsElTop > logoHeight) {
+        // ... set text, fade in
+        logo.innerText = "Projects";
+        logoFadeIn();
+      }
+      // If Project element top intersects with logo...
+      else if (projectsElTop < logoHeight && projectsElBottom > logoHeight) {
+        // ... fade out
+        logoFadeOut();
+      }
+      // If about element bottom ''
+      else if (projectsElBottom < logoHeight && resElTop > logoHeight) {
+        // ... set text, fade in
+        logo.innerText = "Resume";
+        logoFadeIn();
+      }
+      // If resume top intersects with logo...
+      else if (resElTop < logoHeight && resElBottom > logoHeight) {
+        // ... fade out
+        logoFadeOut();
+      }
     });
   },
 };
