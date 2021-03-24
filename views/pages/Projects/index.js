@@ -17,7 +17,7 @@ const projectCardsData = [
   },
   {
     title: "Leave a Note",
-    image: "./assets/images/leaveANote_logo.png",
+    image: "./assets/images/note_logo.png",
     deployedLink: "https://project-leave-a-note.herokuapp.com/",
     githubLink: "https://github.com/gregstead/Leave_A_Note",
     description: `I built out the database and backend functionality for Leave A Note, an app that allows users to log in and leave a note for their groups. It also allows them to view notes left for them by other users in their group.
@@ -27,7 +27,7 @@ const projectCardsData = [
   },
   {
     title: "Employee Tracker",
-    image: "./assets/images/employee_tracker4x3.png",
+    image: "./assets/images/logo.svg",
     deployedLink:
       "https://drive.google.com/file/d/13UkrkMyw6L76u-xx7RKj9JRczUeB1LFZ/view",
     githubLink: "https://github.com/gregstead/12_employee_tracker",
@@ -37,14 +37,14 @@ const projectCardsData = [
   },
   {
     title: "Weather Dashboard",
-    image: "./assets/images/weather_dashboard.png",
-    deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
-    githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
+    image: "http://openweathermap.org/img/wn/10d@2x.png",
+    deployedLink: "https://gregstead.github.io/06_weather_dashboard/",
+    githubLink: "https://github.com/gregstead/06_weather_dashboard",
     description: `A simple weather dashboard built with Materialize and OpenWeatherMap APIs`,
   },
   {
     title: "Eat Da Burger",
-    image: "./assets/images/eatdaburger_image.png",
+    image: "./assets/images/hamburger_1f354.png",
     deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
     githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
     description: `This app takes a name from user and creates a burger on a
