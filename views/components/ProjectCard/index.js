@@ -11,7 +11,7 @@ document.head.innerHTML += `<link type="text/css" rel="stylesheet" href="${style
 // }
 function ProjectCard(projectObject) {
   return ` 
-  <div class="column is-one-third">
+
     <div class="card">
       <div class="project-card-image-container">
         <figure>
@@ -32,8 +32,7 @@ function ProjectCard(projectObject) {
         <div><p>${projectObject.description}</p></div>
       </div>
     </div>
-    <hr>
-  </div>`;
+    <hr>`;
 }
 
 export default ProjectCard;
