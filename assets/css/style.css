@@ -2,11 +2,24 @@
 
 :root {
   --paper-white-100: #f7f7f5;
-  --paper-white-200: #f0f0ed;
-  --paper-white-300: #e0e0db;
+  --paper-white-200: #eeeeea;
+  --paper-white-300: #e6e6df;
+  --paper-white-400: #ddddd4;
+  --paper-white-500: #d4d4c9;
+  --paper-white-600: #cbcbbf;
+  --paper-white-700: #c3c3b4;
+  --paper-white-800: #babaa9;
+  --paper-white-900: #b1b19e;
   --grey-900: #212120;
-  --grey-800: #20201f;
-  --grey-700: #3f3f3c;
+  --grey-800: #2b2b2a;
+  --grey-700: #353533;
+  --grey-600: #3f3f3d;
+  --grey-500: #494947;
+  --grey-400: #5d5d5a;
+  --grey-300: #676764;
+  --grey-200: #71716d;
+  --grey-100: #848481;
+  --blue-accent: #00C9B0;
 
   --accent-font: 'Poppins', sans-serif;
   --regular-font: 'Open Sans', sans-serif;
@@ -31,11 +44,10 @@ body {
   transition: 0.5s ease-in-out
 }
 
-
+/* Typography */
 a {
   text-decoration: none;
 }
-
 
 h1,
 h2,
@@ -77,20 +89,26 @@ p {
 }
 
 .body-dark {
-  color: var(--paper-white-300);
+  color: var(--paper-white-600);
 }
 
-.body-dark h1, h2, h3, h4 {
+.body-dark h1, h2 {
   color: unset;
   color: var(--paper-white-100);
 }
 
+.body-dark h3,h4 {
+  color: unset;
+  color: var(--paper-white-400);
+}
+
 .body-dark a {
-  color: var(--paper-white-200)
+  color: var(--paper-white-400)
 }
 
 .body-dark a:hover {
-  color: var(--paper-white-100);
+  transition: .5s ease-in;
+  color: var(--blue-accent);
 }
 
 
