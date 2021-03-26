@@ -6,6 +6,13 @@
 
 .project-card-image {
   max-width: 110px;
+  transition: 250ms ease-in-out;
+  filter: grayscale();
+}
+
+.project-card-image:hover {
+  transition: 250ms ease-in-out;
+  filter: unset;
 }
 
 div.project-card-content {
