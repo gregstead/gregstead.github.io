@@ -9,7 +9,7 @@ import Error404 from "./views/pages/Error404/index.js";
 import Navbar from "./views/components/Navbar/index.js";
 import Bottombar from "./views/components/Footer/index.js";
 
-// The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
+// The router code.
 const router = async () => {
   // Lazy load view element:
   const header = null || document.getElementById("header_container");
