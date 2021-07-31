@@ -13,7 +13,7 @@ const About = {
         
 
         <div class="about-text">
-            <p id="first-paragraph">Hi, I'm Greg! I am a web developer in Overland Park, Kansas. I bring a wide breadth of
+            <p id="first-paragraph">Hi, I'm <span class="about-greg">Greg</span>! I am a web developer in Overland Park, Kansas. I bring a wide breadth of
                 knowledge,
                 experience, and creativity to
                 collaborative problem-solving. Currently, I help deliver innovation, value, and the best possible

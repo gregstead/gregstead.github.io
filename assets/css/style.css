@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap");
 
 :root {
   --paper-white-100: #f7f7f5;
@@ -19,10 +19,10 @@
   --grey-300: #676764;
   --grey-200: #71716d;
   --grey-100: #848481;
-  --blue-accent: #00C9B0;
+  --blue-accent: #00c9b0;
 
-  --accent-font: 'Poppins', sans-serif;
-  --regular-font: 'Open Sans', sans-serif;
+  --accent-font: "Poppins", sans-serif;
+  --regular-font: "Open Sans", sans-serif;
 }
 
 * {
@@ -41,7 +41,7 @@ body {
   overflow-x: hidden;
   line-height: 1.5;
   font-family: var(--regular-font);
-  transition: 0.5s ease-in-out
+  transition: 0.5s ease-in-out;
 }
 
 /* Typography */
@@ -76,12 +76,15 @@ p {
   background-color: var(--paper-white-100);
 }
 
-.body-light h1, h2, h3, h4 {
+.body-light h1,
+h2,
+h3,
+h4 {
   color: var(--grey-900);
 }
 
 .body-light a {
-  color: var(--grey-700)
+  color: var(--grey-700);
 }
 
 .body-light a:hover {
@@ -92,25 +95,26 @@ p {
   color: var(--paper-white-600);
 }
 
-.body-dark h1, h2 {
+.body-dark h1,
+h2 {
   color: unset;
   color: var(--paper-white-100);
 }
 
-.body-dark h3,h4 {
+.body-dark h3,
+h4 {
   color: unset;
   color: var(--paper-white-400);
 }
 
 .body-dark a {
-  color: var(--paper-white-400)
+  color: var(--paper-white-400);
 }
 
 .body-dark a:hover {
-  transition: .5s ease-in;
+  transition: 0.5s ease-in;
   color: var(--blue-accent);
 }
-
 
 .container {
   padding-top: 0.25rem;
@@ -146,7 +150,7 @@ div#page_container {
   width: 200%;
   height: 300%;
   opacity: 0.4;
-  transition: 250ms ease-in;
+  transition: 500ms ease-in-out;
 }
 
 .noise-light {
@@ -159,7 +163,8 @@ div#page_container {
 }
 
 @keyframes grain {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0);
   }
   10% {
