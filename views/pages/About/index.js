@@ -23,7 +23,7 @@ const About = {
         </div>
 
         <div class="about-text">
-            <p id="first-paragraph">Hi, I'm Greg! I am a web developer in Overland Park, Kansas. I bring a wide breadth of
+            <p id="first-paragraph">Hi, I'm <span class="greg-name">Greg</span>! I am a web developer in Overland Park, Kansas. I bring a wide breadth of
                 knowledge,
                 experience, and creativity to
                 collaborative problem-solving. Currently, I help deliver innovation, value, and the best possible
@@ -67,25 +67,74 @@ const About = {
 
     const arrow_arrow = document.querySelector(".arrow1-arrow");
     const arrow_arrow_length = arrow_arrow.getTotalLength();
+    arrow_arrow.style.strokeDasharray =
+      arrow_arrow_length + " " + arrow_arrow_length;
+    arrow_arrow.style.strokeDashoffset = arrow_arrow_length;
 
-    let handle = 0;
-    let currentFrame = 0;
+    let lineHandle = 0;
+    let currentLineFrame = 0;
 
-    function draw_arrow() {
+    function draw_arrow_line() {
       const total_frames = 60;
-      let progress = currentFrame / total_frames;
+      const progress = currentLineFrame / total_frames;
       if (progress > 1) {
-        window.cancelAnimationFrame(handle);
+        window.cancelAnimationFrame(lineHandle);
+        return 0;
       } else {
-        currentFrame++;
+        currentLineFrame++;
         arrow_line.style.strokeDashoffset = Math.floor(
           arrow_line_length * (1 - progress)
         );
       }
-      handle = window.requestAnimationFrame(draw_arrow);
+      lineHandle = window.requestAnimationFrame(draw_arrow_line);
     }
 
-    draw_arrow();
+    let arrowHandle = 0;
+    let currentArrowFrame = 0;
+
+    function draw_arrow_arrow() {
+      const total_frames = 20;
+      const progress = currentArrowFrame / total_frames;
+      if (progress > 1) {
+        window.cancelAnimationFrame(arrowHandle);
+        return 0;
+      } else {
+        currentArrowFrame++;
+        arrow_arrow.style.strokeDashoffset = Math.floor(
+          arrow_arrow_length * (1 - progress)
+        );
+      }
+      arrowHandle = window.requestAnimationFrame(draw_arrow_arrow);
+    }
+
+    function reset() {
+      lineHandle = 0;
+      currentLineFrame = 0;
+      arrowHandle = 0;
+      currentArrowFrame = 0;
+
+      arrow_line.style.strokeDasharray =
+        arrow_line_length + " " + arrow_line_length;
+      arrow_line.style.strokeDashoffset = arrow_line_length;
+      arrow_arrow.style.strokeDasharray =
+        arrow_arrow_length + " " + arrow_arrow_length;
+      arrow_arrow.style.strokeDashoffset = arrow_arrow_length;
+    }
+
+    // Draw arrow on hover over "Greg"
+    const gregName = document.querySelector(".greg-name");
+    gregName.addEventListener("mouseover", () => {
+      draw_arrow_line();
+      draw_arrow_arrow();
+      //   setTimeout(() => {
+      //     reset();
+      //   }, 1500);
+    });
+    gregName.addEventListener("mouseout", () => {
+      setTimeout(() => {
+        reset();
+      }, 1500);
+    });
   },
 };
 
