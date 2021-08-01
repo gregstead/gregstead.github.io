@@ -177,7 +177,7 @@ const About = {
     kansasText.addEventListener("mouseover", () => {
       draw_kansas();
     });
-    kansasText.addEventListener("mouseover", () => {
+    kansasText.addEventListener("mouseout", () => {
       setTimeout(() => {
         kansas_reset();
       }, 1500);
