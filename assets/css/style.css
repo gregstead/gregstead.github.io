@@ -150,7 +150,7 @@ div#page_container {
   width: 200%;
   height: 300%;
   opacity: 0.4;
-  transition: 500ms ease-in-out;
+  transition: 500ms ease-in;
 }
 
 .noise-light {
