@@ -25,6 +25,7 @@ const router = async () => {
   content.innerHTML = content_data;
   footer.innerHTML = await Bottombar.render();
   await Navbar.after_render();
+  await About.after_render();
   await Bottombar.after_render();
 };
 

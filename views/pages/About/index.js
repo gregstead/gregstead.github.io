@@ -7,13 +7,23 @@ const About = {
     const view = `
     <section id="aboutEl" class="container about-container">
     
-            <div class="main-image">
-                <img id="about-image" src="./assets/images/greg_kelce_kisses.jpeg" alt="Greg and his dog Kelce" class="m-0 p-5" />
-            </div>
-        
+    
+    <div class="about-content-container">
+        <div class="main-image">
+        <img id="about-image" src="./assets/images/greg_kelce_kisses.jpeg" alt="Greg and his dog Kelce" class="m-0 p-5" />
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="115" height="55">
+            <g fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                <path class="arrow1-arrow" d="M105.316 14.914c.636-4.341 4.301-6.633 5.712-10.586-3.192.257-9.689.487-12.638-1.149"/>
+                <path class="arrow1-line" d="M3.972 42.006c11.277 3.539 21.928 4.074 33.094-.4 7.071-2.834 26.178-12.746 24.99-22.787-1.262-10.659-18.22-.537-22.249 2.65-6.946 5.496-17.75 19.106-8.208 27.183 7.722 6.535 22.411 1.982 28.51-4.781 6.458-7.162 1.716-13.428-6.613-14.932-3.418-.616-16.125 1.604-7.122-.591 20.41-4.973 40.229-13.489 59.847-20.843"/>
+            </g>
+        </svg>
+        </div>
+    
+            
+        </div>
 
         <div class="about-text">
-            <p id="first-paragraph">Hi, I'm Greg! I am a web developer in Overland Park, Kansas. I bring a wide breadth of
+            <p id="first-paragraph">Hi, I'm <span class="greg-name">Greg</span>! I am a web developer in Overland Park, Kansas. I bring a wide breadth of
                 knowledge,
                 experience, and creativity to
                 collaborative problem-solving. Currently, I help deliver innovation, value, and the best possible
@@ -41,12 +51,91 @@ const About = {
             <a class="p-3 is-size-1" href="https://twitter.com/soylentgreg" target="_blank" rel="noopener noreferrer"><i
                     id="fa-twitter" class="fab fa-twitter"></i></a>
         </div>
+    
 
 </section>
     `;
     return view;
   },
-  after_render: async () => {},
+  after_render: async () => {
+    //   SVG animation
+    const arrow_line = document.querySelector(".arrow1-line");
+    const arrow_line_length = arrow_line.getTotalLength();
+    arrow_line.style.strokeDasharray =
+      arrow_line_length + " " + arrow_line_length;
+    arrow_line.style.strokeDashoffset = arrow_line_length;
+
+    const arrow_arrow = document.querySelector(".arrow1-arrow");
+    const arrow_arrow_length = arrow_arrow.getTotalLength();
+    arrow_arrow.style.strokeDasharray =
+      arrow_arrow_length + " " + arrow_arrow_length;
+    arrow_arrow.style.strokeDashoffset = arrow_arrow_length;
+
+    let lineHandle = 0;
+    let currentLineFrame = 0;
+
+    function draw_arrow_line() {
+      const total_frames = 60;
+      const progress = currentLineFrame / total_frames;
+      if (progress > 1) {
+        window.cancelAnimationFrame(lineHandle);
+        return 0;
+      } else {
+        currentLineFrame++;
+        arrow_line.style.strokeDashoffset = Math.floor(
+          arrow_line_length * (1 - progress)
+        );
+      }
+      lineHandle = window.requestAnimationFrame(draw_arrow_line);
+    }
+
+    let arrowHandle = 0;
+    let currentArrowFrame = 0;
+
+    function draw_arrow_arrow() {
+      const total_frames = 20;
+      const progress = currentArrowFrame / total_frames;
+      if (progress > 1) {
+        window.cancelAnimationFrame(arrowHandle);
+        return 0;
+      } else {
+        currentArrowFrame++;
+        arrow_arrow.style.strokeDashoffset = Math.floor(
+          arrow_arrow_length * (1 - progress)
+        );
+      }
+      arrowHandle = window.requestAnimationFrame(draw_arrow_arrow);
+    }
+
+    function reset() {
+      lineHandle = 0;
+      currentLineFrame = 0;
+      arrowHandle = 0;
+      currentArrowFrame = 0;
+
+      arrow_line.style.strokeDasharray =
+        arrow_line_length + " " + arrow_line_length;
+      arrow_line.style.strokeDashoffset = arrow_line_length;
+      arrow_arrow.style.strokeDasharray =
+        arrow_arrow_length + " " + arrow_arrow_length;
+      arrow_arrow.style.strokeDashoffset = arrow_arrow_length;
+    }
+
+    // Draw arrow on hover over "Greg"
+    const gregName = document.querySelector(".greg-name");
+    gregName.addEventListener("mouseover", () => {
+      draw_arrow_line();
+      draw_arrow_arrow();
+      //   setTimeout(() => {
+      //     reset();
+      //   }, 1500);
+    });
+    gregName.addEventListener("mouseout", () => {
+      setTimeout(() => {
+        reset();
+      }, 1500);
+    });
+  },
 };
 
 export default About;

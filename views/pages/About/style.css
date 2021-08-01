@@ -8,20 +8,44 @@ div.about-text hr {
   margin-bottom: 2em;
 }
 
+div.centered-child {
+  text-align: center;
+}
+
+i {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.about-content-container {
+  position: relative;
+  display: inline-block;
+}
+
+.about-content-container img {
+  display: block;
+}
+.about-content-container div {
+  display: block;
+}
+
+.about-content-container svg {
+  position: absolute;
+  bottom: 10vh;
+  right: 50vw;
+  transform: rotate(-20deg) scale(1.5);
+}
+
+.arrow {
+  stroke: var(--blue-accent);
+}
+
 .main-image {
   text-align: center;
 }
 
-#about-image {
-filter: grayscale(1);
-width: 100%;
-height: 100%;
-margin-top: 5em;
-margin-bottom: 5em;
-max-width: 99%;}
-
-div.centered-child {
-  text-align: center;
+.rounded {
+  border-radius: 50%;
 }
 
 .socio-icons {
@@ -29,13 +53,15 @@ div.centered-child {
   margin-bottom: 2em;
 }
 
-i {
-  margin-left: .5em;
-  margin-right: .5em;
-}
-
-.rounded {
-  border-radius: 50%;
+#about-image {
+  filter: grayscale(1);
+  width: 100%;
+  height: 100%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  max-width: 99%;
+  z-index: -1;
+  position: relative;
 }
 
 /* Tablet and larger */
@@ -47,5 +73,4 @@ i {
     padding-right: 1rem;
     padding-left: 1rem;
   }
-
 }
