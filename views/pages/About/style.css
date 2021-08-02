@@ -38,6 +38,7 @@ i {
   position: absolute;
   bottom: 10vh;
   right: 50vw;
+  left: 2vw;
   transform: rotate(-20deg) scale(1.5);
 }
 
