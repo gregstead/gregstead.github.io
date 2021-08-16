@@ -18,13 +18,28 @@ const projectCardsData = [
   {
     title: "Leave a Note",
     image: "./assets/images/note_logo.png",
-    deployedLink: "https://project-leave-a-note.herokuapp.com/",
+    deployedLink: "https://leave-a-note-v2.herokuapp.com/",
     githubLink: "https://github.com/gregstead/Leave_A_Note",
-    description: `I built out the database and backend functionality for Leave A Note, an app that allows users to log in and leave a note for their groups. It also allows them to view notes left for them by other users in their group.
+    description: `I initially built the database and server for this project. Since the group disbanded, I have also revamped the front-end. This is a digital message board with a MySQL user database.
     <br /><br />
     This project was created as the second milestone project for the
     Full Stack Coding Bootcamp at the University of Kansas by Raihan Akter, Ben Galloway, Julian Huynh, and Greg Stead`,
   },
+  {
+    title: "Eat Da Burger",
+    image: "./assets/images/hamburger_1f354.png",
+    deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
+    githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
+    description: `An exercise in building a CRUD application with Express, MySQL, and Node. This app takes the name of a burger form the user and adds it to a database. The burger can then be "devoured" or marked deleted.`,
+  },
+  {
+    title: "Weather Dashboard",
+    image: "http://openweathermap.org/img/wn/10d@2x.png",
+    deployedLink: "https://gregstead.github.io/06_weather_dashboard/",
+    githubLink: "https://github.com/gregstead/06_weather_dashboard",
+    description: `A simple weather dashboard built with Materialize and OpenWeatherMap APIs`,
+  },
+
   {
     title: "Employee Tracker",
     image: "./assets/images/logo.svg",
@@ -34,23 +49,6 @@ const projectCardsData = [
     description: `A content management system command line interface to make it
     easier for employers to manage the departments, roles, and
     employees in their companies.`,
-  },
-  {
-    title: "Weather Dashboard",
-    image: "http://openweathermap.org/img/wn/10d@2x.png",
-    deployedLink: "https://gregstead.github.io/06_weather_dashboard/",
-    githubLink: "https://github.com/gregstead/06_weather_dashboard",
-    description: `A simple weather dashboard built with Materialize and OpenWeatherMap APIs`,
-  },
-  {
-    title: "Eat Da Burger",
-    image: "./assets/images/hamburger_1f354.png",
-    deployedLink: "https://peaceful-inlet-93418.herokuapp.com/",
-    githubLink: "https://github.com/gregstead/13_Eat_Da_Burger",
-    description: `This app takes a name from user and creates a burger on a
-        database. The burger can them be "devoured." The page will
-        render a list of burgers available to devour and burgers that
-        have been devoured.`,
   },
 ];
 
