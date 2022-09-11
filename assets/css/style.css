@@ -44,6 +44,21 @@ body {
   transition: 0.5s ease-in-out;
 }
 
+/* Particulars */
+.res-text + ul {
+  list-style: inside;
+  padding-left: 1em;
+}
+
+.res-text + ul li {
+  padding-left: 2em;
+}
+
+.res-text + ul li ul {
+  list-style: inside;
+  padding-left: 3em;
+}
+
 /* Typography */
 a {
   text-decoration: none;

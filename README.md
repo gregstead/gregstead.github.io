@@ -26,7 +26,8 @@ My portfolio. I appreciate any feedback!
 
 Project is created with:
 
-- Vanilla JS
+- JavaScript
+
 - HTML
 - CSS
   - [Font Awesome](https://fontawesome.com/)
